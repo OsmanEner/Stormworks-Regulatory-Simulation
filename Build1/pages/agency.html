@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agency — Spaceflight Regulatory Portal (Simulation)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&family=Lexend:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script defer src="../assets/js/shared-header.js"></script>
+</head>
+<body class="agency-page">
+  <div id="utility-header"></div>
+  <header class="portal-masthead">
+    <div class="portal-masthead-inner">
+      <div class="portal-masthead-title">SPACEFLIGHT REGULATORY PORTAL</div>
+      <nav class="portal-masthead-nav" aria-label="Portal navigation"><a href="../index.html">Home</a><a href="../index.html#agency-directory">Agency Directory</a></nav>
+    </div>
+  </header>
+  <main class="agency-main">
+    <nav class="portal-breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span aria-hidden="true">/</span><a href="../index.html#agency-directory">Agency Directory</a></nav>
+    <h1 id="name">Agency</h1>
+    <p>This agency page has not been set up yet.</p>
+    <p><a href="../index.html">← Back to agency selection</a></p>
+  </main>
+  <footer class="portal-footer">Fictional Stormworks regulatory simulation</footer>
+  <script>
+    const names = {
+      faacst: 'FAA — Commercial Space Transportation',
+      faaair: 'FAA — Air Traffic',
+      uscg: 'U.S. Coast Guard',
+      fcc: 'Federal Communications Commission'
+    };
+    const key = new URLSearchParams(location.search).get('agency');
+    const name = names[key] || 'Agency';
+    document.getElementById('name').textContent = name;
+    document.title = name + ' — Simulation Portal';
+  </script>
+</body>
+</html>

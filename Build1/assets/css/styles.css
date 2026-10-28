@@ -1,0 +1,274 @@
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body { margin: 0; color: #273042; background: white; font-family: Arial, Helvetica, sans-serif; }
+a { color: #364761; }
+a:hover { color: #1d58a1; }
+
+/* Traditional, understated US-government-style agency directory */
+.portal-page, .agency-page { min-height: 100vh; display: flex; flex-direction: column; font-family: 'Kanit', Arial, Helvetica, sans-serif; }
+.portal-masthead { background: #1b3266; color: #fff; min-height: 84px; }
+.portal-masthead-inner { width: min(1370px, calc(100% - 64px)); margin: 0 auto; min-height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+.portal-masthead-title { font-family: 'Lexend', Arial, sans-serif; font-size: clamp(24px, 2.8vw, 40px); letter-spacing: -1.2px; font-weight: 600; line-height: 1.2; }
+.portal-masthead-nav { display: flex; align-items: center; gap: 42px; flex: 0 0 auto; }
+.portal-masthead-nav a { color: #fff; text-decoration: none; font-size: 17px; }
+.portal-masthead-nav a:hover, .portal-masthead-nav a:focus-visible, .portal-masthead-nav [aria-current="page"] { text-decoration: underline; text-underline-offset: 10px; text-decoration-thickness: 2px; }
+.portal-container { width: min(1280px, calc(100% - 64px)); margin: 0 auto; flex: 1; }
+.portal-breadcrumb { display: flex; align-items: center; gap: 12px; color: #374154; margin: 23px 0 0; font-size: 16px; }
+.portal-breadcrumb a { color: #0054a6; text-decoration: underline; text-underline-offset: 2px; }
+.portal-intro { text-align: center; margin: 53px 0 46px; }
+.portal-intro h1 { font-family: 'Lexend', Arial, sans-serif; color: #070707; font-size: clamp(26px, 3.1vw, 43px); font-weight: 700; line-height: 1.24; letter-spacing: -1px; margin: 0; }
+.portal-intro p { margin: 12px 0 0; font-size: 20px; color: #4b576b; }
+.directory-section h2 { font: 700 29px/1.2 'Lexend', Arial, sans-serif; color: #1b3266; margin: 0 0 0; padding-bottom: 15px; border-bottom: 3px solid #1b3266; }
+.agency-directory-item { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 100px; padding: 18px 18px; border-bottom: 1px solid #cfd8e5; }
+.agency-directory-item:last-child { border-bottom: none; }
+.agency-directory-item a { font-size: 21px; font-weight: 500; color: #0056bf; text-decoration: underline; text-underline-offset: 2px; }
+.agency-directory-item a:hover { color: #003877; }
+.agency-directory-item p { font-size: 17px; line-height: 1.4; color: #424e62; margin: 3px 0 0; }
+.directory-chevron { color: #0056bf; font: 34px/1 Arial, sans-serif; }
+.agency-directory-item[hidden], #directory-no-results[hidden] { display: none; }
+#directory-no-results { padding: 24px 18px; color: #495367; }
+.portal-footer { border-top: 1px solid #aebbd0; max-width: 1450px; width: calc(100% - 60px); margin: 45px auto 0; padding: 18px 0 27px; font: 400 13px 'Kanit', Arial, sans-serif; color: #657187; }
+
+/* Shared utility header on ALL pages + the county page.
+   Cameron County: intentionally plain, fixed-width government-page layout.
+   All dimensions are CSS pixels, so it matches the reference at regular browser zoom. */
+.county-page {
+  font-family: 'Kanit', Arial, Helvetica, sans-serif;
+  color: #151c2a;
+  background: #fff;
+}
+.county-topbar { height: 66px; background: #f7f8f9; border-top: 3px solid #36b4c3; font-family: 'Kanit', Arial, Helvetica, sans-serif; color: #151c2a; }
+.county-topbar-inner {
+  width: min(1170px, calc(100% - 40px)); height: 100%; margin: auto;
+  display: flex; align-items: center; justify-content: flex-end; gap: 24px;
+  white-space: nowrap; font-size: 14px; font-weight: 400;
+}
+.topbar-address { margin-right: auto; }
+.topbar-phone {
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  color: #182642; height: 44px; text-decoration: none; font-size: 14px;
+}
+.phone-icon { width: 17px; height: 17px; display: block; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.topbar-language {
+  border: 1px solid #7383a8; border-radius: 6px; width: 170px;
+  height: 54px; display: inline-flex; align-items: center; justify-content: flex-start;
+  gap: 9px; color: #162c59; font-weight: 500; font-size: 16px;
+  padding: 0 12px; margin-left: 18px; cursor: default; user-select: none; flex: 0 0 auto;
+}
+.language-flag { width: 31px; height: 20px; display: block; flex: 0 0 auto; object-fit: cover; }
+.language-name { display: block; line-height: 1; }
+.language-chevron { width: 17px; height: 17px; margin-left: auto; display: block; stroke: currentColor; fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
+.topbar-search {
+  display: flex; align-items: center; height: 44px; width: 300px;
+  border: 1px solid #e0e6ec; background: white; border-radius: 22px; padding: 0 14px 0 23px; margin: 0;
+}
+.topbar-search input {
+  display: block; height: 100%; border: none; outline: none; flex: 1; min-width: 0;
+  background: transparent; padding: 0; margin: 0;
+  font: 400 14px/20px 'Kanit', Arial, sans-serif;
+}
+.topbar-search input::-webkit-search-decoration { -webkit-appearance: none; }
+.topbar-search-submit { display: flex; align-items: center; justify-content: center; padding: 0; margin: 0; background: transparent; border: 0; width: 25px; height: 25px; cursor: pointer; }
+.search-icon { display: block; width: 20px; height: 20px; flex: 0 0 20px; stroke: #182b60; stroke-width: 2; fill: none; stroke-linecap: round; }
+.topbar-social { color: #2072c4; font: bold 19px Arial, sans-serif; letter-spacing: 1px; }
+
+.county-header { height: 84px; background: #182b60; }
+.county-header-inner {
+  width: min(1170px, calc(100% - 40px)); height: 100%; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center; gap: 26px;
+}
+.county-logo {
+  color: white; white-space: nowrap;
+  font-family: 'Lexend', Arial, Helvetica, sans-serif; font-weight: 700;
+  font-size: 35px; letter-spacing: -1.7px;
+}
+.county-logo span:first-child { color: #288bd4; }
+.county-logo .logo-star { color: white; font-size: 34px; margin-left: 3px; }
+.county-nav { display: flex; align-items: center; gap: 30px; margin-right: 8px; }
+.county-nav-label, .county-nav-directory {
+  display: inline-flex; align-items: center; gap: 5px; color: white;
+  text-decoration: none; font-size: 15px; font-weight: 400; line-height: 1.25; white-space: nowrap;
+}
+.county-nav-label { cursor: default; user-select: none; }
+.county-nav-label svg { width: 12px; height: 12px; flex: 0 0 12px; display: block; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.county-nav-directory:hover, .county-nav-directory:focus-visible { text-decoration: underline; }
+
+/* Reference screenshot: long vertical gaps, centered headings and a 1170px-wide table. */
+.county-main { width: min(1170px, calc(100% - 40px)); margin: 0 auto; padding: 90px 0 45px; }
+.county-main h1, .county-main .section-heading {
+  font-family: 'Lexend', Arial, Helvetica, sans-serif; font-weight: 700;
+  text-align: center;
+}
+.county-main h1 { color: #080808; font-size: 37px; line-height: 1.32; letter-spacing: .3px; margin: 0; }
+.section-heading {
+  color: #3d3b50; font-size: 45px; line-height: .95;
+  letter-spacing: -.6px; margin: 146px 0 81px;
+  width: calc(100% + 80px); margin-left: -40px;
+}
+.delay-heading { margin-top: 52px; margin-bottom: 65px; }
+.table-scroll { width: 100%; overflow-x: auto; }
+.notice-table { border-collapse: collapse; width: 100%; table-layout: fixed; font-size: 17px; line-height: 1.35; color: #243042; }
+.notice-table th, .notice-table td { border: 1px solid #d3dce4; }
+.notice-table th { background: #f4f7f7; font-size: 16px; font-weight: 500; color: #121925; height: 60px; padding: 12px 10px; }
+.notice-table th:nth-child(n+2) { font-weight: 600; }
+.notice-table .table-spacer th { background: white; height: 34px; padding: 0; }
+.notice-table td { padding: 15px 16px; height: 58px; }
+.closure-table th:nth-child(1) { width: 14.5%; }
+.closure-table th:nth-child(2) { width: 21%; }
+.closure-table th:nth-child(3) { width: 21%; }
+.closure-table th:nth-child(4) { width: 43.5%; }
+.closure-table td:nth-child(2), .closure-table td:nth-child(3), .closure-table td:nth-child(4) { text-align: center; }
+.delay-table th:nth-child(1) { width: 26.5%; }
+.delay-table th:nth-child(2) { width: 39.5%; }
+.delay-table th:nth-child(3) { width: 34%; }
+.delay-table td:nth-child(2), .delay-table td:nth-child(3) { text-align: center; }
+.no-notices { text-align: center !important; color: #666; }
+.orders-section { padding-top: 24px; }
+.orders-section p { margin: 31px 0; line-height: 1.5; font-size: 16px; }
+.orders-section a { color: #37445a; text-decoration: underline; text-transform: uppercase; }
+.county-footer { border-top: 1px solid #ececec; padding: 18px 15px; color: #666; text-align: center; font-size: 12px; margin-top: 34px; }
+
+/* The order pages use the exact same two-row header as the closure page.
+   Only the header typography is scoped here, preserving the order document styling. */
+.order-page .county-topbar, .order-page .county-header {
+  font-family: 'Kanit', Arial, Helvetica, sans-serif;
+  color: #151c2a;
+}
+
+@media (max-width: 1300px) {
+  .county-topbar-inner { gap: 14px; }
+  .topbar-language { margin-left: 0; }
+  .topbar-search { width: 210px; }
+  .county-nav { gap: 17px; }
+}
+@media (max-width: 1000px) {
+  .county-topbar-inner { justify-content: center; font-size: 12px; }
+  .topbar-search, .topbar-social { display: none; }
+  .topbar-language { width: 149px; height: 44px; font-size: 13px; }
+  .language-flag { width: 27px; height: 18px; }
+  .county-logo { font-size: 23px; }
+  .county-logo .logo-star { font-size: 25px; }
+  .county-nav { gap: 12px; margin-right: 0; }
+  .county-nav-label, .county-nav-directory { font-size: 12px; }
+  .county-main h1 { font-size: clamp(23px, 3vw, 35px); }
+  .section-heading { font-size: clamp(28px, 4vw, 46px); width: 100%; margin-left: 0; }
+  .notice-table { font-size: 14px; }
+  .notice-table th { font-size: 13px; }
+}
+@media (max-width: 650px) {
+  .county-topbar { height: auto; min-height: 40px; }
+  .county-topbar-inner { padding: 8px 0; flex-wrap: wrap; gap: 5px 10px; font-size: 11px; }
+  .topbar-language { margin-left: 0; }
+  .county-header { height: auto; }
+  .county-header-inner { flex-direction: column; justify-content: center; padding: 18px 0 13px; gap: 12px; }
+  .county-logo { font-size: 24px; }
+  .county-nav { flex-wrap: wrap; justify-content: center; gap: 7px 15px; }
+  .county-nav-label, .county-nav-directory { font-size: 11px; }
+  .county-main { padding: 50px 0 30px; }
+  .county-main h1 { font-size: clamp(20px, 5vw, 26px); }
+  .section-heading { margin: 70px 0 42px; font-size: clamp(21px, 5vw, 31px); line-height: 1.08; }
+  .delay-heading { margin-top: 42px; margin-bottom: 42px; }
+  .desktop-break { display: none; }
+  .notice-table { font-size: 12px; min-width: 650px; }
+  .notice-table th { font-size: 11px; height: 42px; }
+  .notice-table td { padding: 10px; height: 44px; }
+  .notice-table .table-spacer th { height: 17px; }
+  .orders-section { padding-top: 12px; }
+  .orders-section p { font-size: 13px; margin: 23px 0; }
+}
+
+/* Agency placeholders inherit the portal style and shared utility bar. */
+.agency-main { width: min(1280px, calc(100% - 64px)); margin: 0 auto; flex: 1; }
+.agency-main h1 { font: 700 clamp(25px, 3vw, 36px)/1.25 'Lexend', Arial, sans-serif; color: #192f63; margin: 55px 0 28px; }
+.agency-main p { font-size: 17px; margin: 22px 0; }
+.agency-main a { color: #0056bf; }
+
+@media (max-width: 900px) {
+  .portal-masthead-inner { width: min(100% - 40px, 1370px); min-height: 84px; }
+  .portal-masthead { min-height: 84px; }
+  .portal-masthead-nav { gap: 18px; }
+  .portal-masthead-nav a { font-size: 14px; }
+  .portal-container, .agency-main { width: calc(100% - 40px); }
+  .portal-intro { margin-top: 38px; }
+}
+@media (max-width: 650px) {
+  .portal-masthead-inner { flex-direction: column; align-items: flex-start; justify-content: center; gap: 18px; padding: 21px 0; }
+  .portal-masthead-title { font-size: 25px; }
+  .portal-masthead-nav { gap: 24px; }
+  .portal-masthead-nav a { font-size: 14px; }
+  .portal-breadcrumb { margin-top: 20px; font-size: 14px; }
+  .portal-intro { margin: 45px 0 42px; }
+  .portal-intro h1 { font-size: 26px; }
+  .portal-intro p { font-size: 16px; }
+  .directory-section h2 { font-size: 23px; }
+  .agency-directory-item { min-height: 85px; padding: 15px 4px; }
+  .agency-directory-item a { font-size: 16px; }
+  .agency-directory-item p { font-size: 13px; }
+  .directory-chevron { font-size: 28px; }
+  .portal-footer { width: calc(100% - 40px); }
+}
+
+/* === COUNTY ORDER LETTERS (8.5 x 11 inch, like reference) ===
+   This section does not change the shared Cameron County header. */
+.order-page { background: #ffffff; }
+.order-main { padding: 38px 20px 60px; }
+.order-actions {
+  display: flex; align-items: center; justify-content: space-between;
+  width: min(816px, 100%); margin: 0 auto 19px; gap: 18px;
+  font: 400 14px 'Kanit', Arial, sans-serif;
+}
+.order-sheet {
+  width: 8.5in; min-height: 11in; margin: 0 auto;
+  background: #fff; border: 1px solid #333; color: #090909;
+  font-family: 'Times New Roman', Times, serif; position: relative;
+  padding: 0; font-size: 17px; line-height: 1.13;
+}
+.order-crest { position: absolute; top: 0.27in; left: 0; width: 100%; display: flex; justify-content: center; }
+.order-crest img { width: 1.28in; height: 1.28in; object-fit: contain; }
+.order-official { position: absolute; top: 1.87in; left: 0; right: 0; text-align: center; }
+.order-official h1 { font: bold 25px/1.1 'Times New Roman', Times, serif; margin: 0; }
+.order-official h2 { font: bold 19px/1.3 'Times New Roman', Times, serif; margin: 8px 0 0; }
+.order-release {
+  position: absolute; top: 3.04in; left: .94in; right: .9in;
+  font: 14px/1.25 'Times New Roman', Times, serif;
+  display: flex; flex-direction: column; align-items: flex-start;
+}
+.order-release strong { font-weight: bold; }
+.order-content {
+  position: relative; padding: 0 .98in;
+  margin-top: 4.01in; text-align: center;
+}
+.order-content h3 {
+  font: bold 20px/1.05 'Times New Roman', Times, serif;
+  text-transform: uppercase; margin: 0 0 28px;
+}
+.order-paragraphs { font: 17.5px/1.12 'Times New Roman', Times, serif; }
+.order-paragraphs p { margin: 0 0 24px; }
+.order-endmark { position: absolute; left: 0; right: 0; text-align: center; font: bold 16px Times, serif; }
+.order-delay .order-endmark { top: 77.6%; }
+.order-closure .order-endmark { top: 88.6%; }
+.order-letterhead-footer {
+  position: absolute; left: .96in; right: .93in; bottom: .25in;
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 12px;
+  font: 12.5px/1.45 'Times New Roman', Times, serif;
+}
+.order-letterhead-footer > div { display: flex; flex-direction: column; }
+.order-letterhead-footer > div:nth-child(2) { text-align: center; }
+.order-letterhead-footer > div:nth-child(3) { text-align: right; }
+.order-not-found { padding: 80px; text-align: center; }
+
+@media screen and (max-width: 860px) {
+  .order-main { overflow-x: auto; }
+  .order-sheet { margin: 0 auto; }
+}
+@media (max-width: 650px) {
+  .order-actions { font-size: 12px; }
+}
+@page { size: letter; margin: 0; }
+@media print {
+  html, body { margin: 0; padding: 0; background: white; }
+  .county-topbar, .county-header, .county-footer, .order-actions { display: none !important; }
+  .order-main { margin: 0; padding: 0; max-width: none; overflow: visible; }
+  .order-sheet { width: 8.5in; min-height: 11in; height: 11in; margin: 0; border: 1px solid #333; page-break-after: avoid; }
+  .order-crest img { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}

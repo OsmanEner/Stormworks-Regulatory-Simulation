@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>County Order</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&family=Lexend:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script defer src="../assets/js/shared-header.js"></script>
+  <script defer src="../data/records.js"></script>
+  <script defer src="../assets/js/order.js"></script>
+</head>
+<body class="order-page">
+  <div id="utility-header"></div>
+  <header class="county-header">
+    <div class="county-header-inner">
+      <div class="county-logo"><span>CAMERON</span>COUNTY<span class="logo-star">✶</span></div>
+      <nav class="county-nav" aria-label="County navigation">
+        <span class="county-nav-label">Government <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></span>
+        <span class="county-nav-label">Departments <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></span>
+        <span class="county-nav-label">Public Services <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></span>
+        <span class="county-nav-label">Justice <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></span>
+        <a class="county-nav-directory" href="../index.html">Directory</a>
+      </nav>
+    </div>
+  </header>
+  <main class="order-main">
+    <div class="order-actions">
+      <a href="cameron-county.html">← Back to closure information</a>
+      <a href="#" id="print-order">Print / Save as PDF</a>
+    </div>
+    <article id="document" class="order-sheet" aria-label="County order">
+      <div class="order-crest"><img src="../assets/images/simulation-seal.svg" alt="County seal illustration"></div>
+      <div class="order-official">
+        <h1 id="doc-judge">Alex Morgan</h1>
+        <h2>County Judge</h2>
+      </div>
+      <div class="order-release">
+        <strong>For Immediate Release</strong>
+        <span id="doc-date"></span>
+        <span>Contact: <span id="doc-contact"></span></span>
+      </div>
+      <div class="order-content">
+        <h3 id="doc-heading"></h3>
+        <div id="doc-paragraphs" class="order-paragraphs"></div>
+      </div>
+      <div class="order-endmark">###</div>
+      <div class="order-letterhead-footer">
+        <div>
+          <strong>Cameron County Courthouse</strong>
+          <strong>C. Dancy Building</strong>
+          <strong>Phone (420) 420-6969</strong>
+        </div>
+        <div>
+          <strong>1100 E. Monroe Street, Suite 218</strong>
+          <strong>BarackHObama@co.cameron.tx.us</strong>
+        </div>
+        <div>
+          <strong>Brownsville, Texas 42069</strong>
+          <strong>Fax (420) 699-4200</strong>
+        </div>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

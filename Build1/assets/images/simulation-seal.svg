@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+  <circle cx="80" cy="80" r="75" fill="#fffdfa" stroke="#9c864f" stroke-width="3"/>
+  <circle cx="80" cy="80" r="67" fill="none" stroke="#9c864f" stroke-width="1.4"/>
+  <circle cx="80" cy="80" r="43" fill="#fffdf7" stroke="#9c864f" stroke-width="2"/>
+  <circle cx="80" cy="80" r="37" fill="none" stroke="#b29e6b" stroke-width="1"/>
+  <defs><path id="sealcurve" d="M 24 80 A 56 56 0 0 1 136 80"/><path id="seallower" d="M 24 80 A 56 56 0 0 0 136 80"/></defs>
+  <text fill="#8f7744" font-family="Georgia,serif" font-size="11.5" letter-spacing="1.2" font-weight="bold"><textPath href="#sealcurve" startOffset="50%" text-anchor="middle">CAMERON COUNTY</textPath></text>
+  <text fill="#8f7744" font-family="Georgia,serif" font-size="10.5" letter-spacing="2" font-weight="bold"><textPath href="#seallower" startOffset="50%" text-anchor="middle">BROWNSVILLE · TEXAS</textPath></text>
+  <path d="M80 44L89.5 68H115L94 84L101.5 108L80 93L58.5 108L66 84L45 68H70.5Z" fill="#b39a5f" stroke="#8a764e" stroke-width="1.2"/>
+  <circle cx="80" cy="80" r="5" fill="#fffdf7"/>
+  <g fill="#a38b55"><circle cx="32" cy="80" r="2"/><circle cx="128" cy="80" r="2"/></g>
+</svg>
