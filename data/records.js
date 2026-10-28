@@ -51,7 +51,7 @@ const countyRecords = {
       date: 'October 28, 2026',
       title: 'TEMPORARY AND INTERMITTENT STATE HIGHWAY 4 ROAD DELAY',
       paragraphs: [
-        `Please be advised that on October 18th, 2026, SpaceX will be conducting transportation operations on Highway 4 near Boca Chica sometime between 3:30 a.m. - 5:00 a.m. The beach and highway 4 will remain open throughout the operation; however, traffic may be delayed for a short duration.`
+        `Please be advised that on October 28th, 2026, SpaceX will be conducting transportation operations on Highway 4 near Boca Chica sometime between 3:30 a.m. - 5:00 a.m. The beach and highway 4 will remain open throughout the operation; however, traffic may be delayed for a short duration.`
       ]
     },
 
