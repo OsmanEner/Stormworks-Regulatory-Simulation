@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/sr-favicon.svg?v=28">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/sr-favicon-32.png?v=28">
+  <link rel="shortcut icon" href="../assets/images/favicon.ico?v=28">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/sr-favicon-180.png?v=28">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ATCSCC Advisory | NASS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500&family=Kanit:wght@400;500;600&family=Lexend:wght@500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script defer src="../assets/js/shared-header.js"></script>
+  <script defer src="../assets/js/nass-clock.js"></script>
+  <script defer src="../assets/js/atcscc-webinar.js"></script>
+</head>
+<body class="nass-page">
+  <div id="utility-header"></div>
+  <header class="faa-header">
+    <div class="faa-brand">
+      <img src="../assets/images/faa-insignia.svg" alt="" class="faa-insignia">
+      <span>Federal Aviation<br>Administration</span>
+    </div>
+    <nav class="faa-header-nav" aria-label="FAA navigation">
+      <a href="../index.html">Directory</a>
+      <a href="tfr.html">NOTAMs</a>
+      <a href="nass.html" aria-current="page">NASS</a>
+    </nav>
+  </header>
+
+  <!-- NAS Status title strip: static, no menu links -->
+  <div class="nass-title-strip">
+    <h1>National Airspace System Status</h1>
+    <time id="nass-utc-clock" class="nass-utc-clock" aria-label="Current UTC time">Current: -- UTC+0</time>
+  </div>
+
+<main class="nass-main atcscc-webinar-main">
+  <h2>ATCSCC Advisories</h2>
+  <div class="nass-separator"></div>
+  <div class="atcscc-webinar-wrap">
+    <div class="atcscc-webinar-back"><a href="nass.html">&lt; Advisory Webinars</a></div>
+    <article id="atcscc-webinar-document" class="atcscc-webinar-document" aria-label="ATCSCC Operations Plan" hidden>
+      <div id="atcscc-webinar-header-title" class="atcscc-webinar-head">ATCSCC Advisory</div>
+      <div id="atcscc-webinar-title" class="atcscc-webinar-subhead"></div>
+      <div class="atcscc-webinar-rawline"><strong>RAW TEXT:</strong><span>EVENT TIME: <span id="atcscc-webinar-event-time"></span> - AND LATER</span></div>
+      <hr class="atcscc-webinar-rule">
+      <div id="atcscc-webinar-description" class="atcscc-webinar-text"></div>
+      <hr class="atcscc-webinar-rule">
+      <div id="atcscc-webinar-operations" class="atcscc-webinar-text"></div>
+      <hr class="atcscc-webinar-rule">
+      <div class="atcscc-webinar-next-title">NEXT PLANNING WEBINAR: <span id="atcscc-webinar-next-time"></span></div>
+      <div id="atcscc-webinar-next-text" class="atcscc-webinar-text atcscc-webinar-next-text"></div>
+      <hr class="atcscc-webinar-rule">
+    </article>
+  </div>
+</main>
+  <footer class="tfr-footer">Stormworks only - not for public use · For game simulation only - not real</footer>
+</body>
+</html>

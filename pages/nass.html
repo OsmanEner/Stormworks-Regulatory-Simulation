@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/sr-favicon.svg?v=28">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/sr-favicon-32.png?v=28">
+  <link rel="shortcut icon" href="../assets/images/favicon.ico?v=28">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/sr-favicon-180.png?v=28">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NASS — ATCSCC Advisories | FAA Air Traffic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&family=Lexend:wght@500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script defer src="../assets/js/shared-header.js"></script>
+  <script defer src="../assets/js/nass-clock.js"></script>
+  <script defer src="../data/atcscc-records.js"></script>
+  <script defer src="../assets/js/atcscc.js"></script>
+</head>
+<body class="nass-page">
+  <div id="utility-header"></div>
+  <header class="faa-header">
+    <div class="faa-brand">
+      <img src="../assets/images/faa-insignia.svg" alt="" class="faa-insignia">
+      <span>Federal Aviation<br>Administration</span>
+    </div>
+    <nav class="faa-header-nav" aria-label="FAA navigation">
+      <a href="../index.html">Directory</a>
+      <a href="tfr.html">NOTAMs</a>
+      <a href="nass.html" aria-current="page">NASS</a>
+    </nav>
+  </header>
+
+  <!-- NAS Status title strip: static, no menu links -->
+  <div class="nass-title-strip">
+    <h1>National Airspace System Status</h1>
+    <time id="nass-utc-clock" class="nass-utc-clock" aria-label="Current UTC time">Current: -- UTC+0</time>
+  </div>
+
+  <main class="nass-main">
+    <h2>ATCSCC Advisories</h2>
+    <div class="nass-separator"></div>
+    <!-- All content below is populated from data/atcscc-records.js -->
+    <p id="atcscc-next-table" class="atcscc-next-table" aria-live="off">NEXT WEBINAR TABLE: —</p>
+    <div class="atcscc-table-wrap">
+      <table class="atcscc-table" aria-label="ATCSCC Operations Plan advisories">
+        <colgroup>
+          <col class="atcscc-col-number">
+          <col class="atcscc-col-control">
+          <col class="atcscc-col-date">
+          <col class="atcscc-col-title">
+          <col class="atcscc-col-send">
+        </colgroup>
+        <thead>
+          <tr><th class="atcscc-table-title" colspan="5" id="atcscc-table-title">ATCSCC OPERATIONS PLANS</th></tr>
+          <tr>
+            <th scope="col">NUMBER</th>
+            <th scope="col">CONTROL<br>ELEMENT</th>
+            <th scope="col">DATE</th>
+            <th scope="col">BRIEF TITLE</th>
+            <th scope="col">SEND TIME</th>
+          </tr>
+        </thead>
+        <tbody id="atcscc-rows">
+          <tr><td colspan="5" class="atcscc-empty">No Operations Plans have been published.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <footer class="tfr-footer">Stormworks only - not for public use · For game simulation only - not real</footer>
+</body>
+</html>
