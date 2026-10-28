@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/sr-favicon.svg?v=27">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/sr-favicon-32.png?v=27">
+  <link rel="shortcut icon" href="../assets/images/favicon.ico?v=27">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/sr-favicon-180.png?v=27">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Temporary Flight Restriction Notice — FAA Air Traffic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&family=Lexend:wght@500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script defer src="../assets/js/shared-header.js"></script>
+  <script defer src="../data/tfr-records.js"></script>
+  <script defer src="../data/tfr-details.js"></script>
+  <script defer src="../assets/js/tfr-notice.js"></script>
+</head>
+<body class="tfr-notice-page">
+  <div id="utility-header"></div>
+  <header class="faa-header">
+    <div class="faa-brand"><img src="../assets/images/faa-insignia.svg" alt="" class="faa-insignia"><span>Federal Aviation<br>Administration</span></div>
+    <nav class="faa-header-nav" aria-label="FAA navigation">
+      <a href="../index.html">Directory</a>
+      <span>SUA</span>
+      <span>About <i class="fa-solid fa-chevron-down faa-about-chevron" aria-hidden="true"></i></span>
+    </nav>
+  </header>
+  <main class="tfr-notice-layout">
+    <aside class="tfr-detail-sidebar" aria-label="TFR page navigation">
+      <a class="tfr-detail-nav-row" href="tfr.html">Open TFR List</a>
+      <div class="tfr-detail-nav-row" aria-label="Open TFR Map (visual only)">Open TFR Map</div>
+      <div class="tfr-detail-nav-row" aria-label="Open NOTAM Text (visual only)">Open NOTAM Text</div>
+      <div class="tfr-detail-downloads" aria-label="Download formats">
+        <div>Download Shape file</div>
+        <a id="tfr-detail-download-xml" href="#">Download XML file</a>
+        <div>Download AIXM file</div>
+      </div>
+    </aside>
+    <section id="tfr-notice-main" class="tfr-notice-content" aria-label="NOTAM details"></section>
+  </main>
+  <footer class="tfr-footer">Stormworks only - not for public use</footer>
+</body>
+</html>

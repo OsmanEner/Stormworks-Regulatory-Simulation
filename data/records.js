@@ -1,9 +1,9 @@
 /*
   CAMERON COUNTY — RECORDS (EDIT THIS FILE IN VS CODE)
   ===================================================
-  The lists below start EMPTY. Nothing will be published until you add a block.
-  To publish a record: copy the example out of its commented section and
-  paste it in the matching list. You can add as many blocks as you need.
+  Current published delay and order records are saved below.
+  To publish more records: copy the example out of its commented section
+  and paste it in the matching list. You can add as many blocks as needed.
 
   For TEXT in orders, use backticks (`text`) so apostrophes and quotation
   marks won't break JavaScript.

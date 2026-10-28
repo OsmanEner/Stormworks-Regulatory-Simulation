@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/sr-favicon.svg?v=27">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/sr-favicon-32.png?v=27">
+  <link rel="shortcut icon" href="../assets/images/favicon.ico?v=27">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/sr-favicon-180.png?v=27">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Temporary Flight Restrictions — FAA Air Traffic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&family=Lexend:wght@500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script defer src="../assets/js/shared-header.js"></script>
+  <script defer src="../data/tfr-records.js"></script>
+  <script defer src="../data/tfr-details.js"></script>
+  <script defer src="../assets/js/tfr.js"></script>
+</head>
+<body class="tfr-page">
+  <div id="utility-header"></div>
+
+  <header class="faa-header">
+    <div class="faa-brand">
+      <img src="../assets/images/faa-insignia.svg" alt="" class="faa-insignia">
+      <span>Federal Aviation<br>Administration</span>
+    </div>
+    <nav class="faa-header-nav" aria-label="FAA navigation">
+      <a href="../index.html">Directory</a>
+      <span>SUA</span>
+      <span>About <i class="fa-solid fa-chevron-down faa-about-chevron" aria-hidden="true"></i></span>
+    </nav>
+  </header>
+
+  <main class="tfr-layout">
+    <aside class="tfr-filters" aria-label="TFR filters">
+      <div class="tfr-map-caption">Open TFR Map</div>
+      <div class="tfr-filter-field">
+        <label for="tfr-center">Center</label>
+        <select id="tfr-center" disabled aria-label="Center: ZHU – Houston Center">
+          <option selected value="ZHU">ZHU - Houston Center</option>
+        </select>
+        <span class="tfr-select-icon" aria-hidden="true"><i class="fa-solid fa-sort"></i></span>
+      </div>
+      <div class="tfr-filter-field">
+        <label for="tfr-state">State</label>
+        <select id="tfr-state" disabled aria-label="State: Texas">
+          <option value="TX" selected>Texas</option>
+        </select>
+        <span class="tfr-select-icon" aria-hidden="true"><i class="fa-solid fa-sort"></i></span>
+      </div>
+      <div class="tfr-filter-field tfr-filter-type">
+        <label for="tfr-type">TFR Type</label>
+        <select id="tfr-type" aria-label="Filter by TFR type">
+          <option value="">- Please select a TFR Type -</option>
+          <option>AIR SHOWS/SPORTS</option>
+          <option>HAZARDS</option>
+          <option>SECURITY</option>
+          <option>SPACE OPERATIONS</option>
+          <option>SPECIAL</option>
+          <option>UAS PUBLIC GATHERING</option>
+          <option>VIP</option>
+        </select>
+        <span class="tfr-select-icon" aria-hidden="true"><i class="fa-solid fa-sort"></i></span>
+      </div>
+      <label class="tfr-search-box" for="tfr-search">
+        <input id="tfr-search" type="search" placeholder="Type to Search" autocomplete="off" aria-label="Search the TFR list">
+      </label>
+      <div class="tfr-data-links">
+        <a href="#" id="tfr-json">TFR List in JSON</a>
+        <a href="#" id="tfr-xml">TFR List in XML</a>
+      </div>
+    </aside>
+
+    <section class="tfr-results" aria-label="TFR records">
+      <div class="tfr-info-bar">
+        <span>Total Records: <strong id="tfr-total">0</strong></span>
+        <span>Data as of: <strong id="tfr-as-of">—</strong></span>
+      </div>
+      <div class="tfr-table-wrap">
+        <table class="tfr-table" aria-label="Temporary flight restrictions">
+          <colgroup><col class="tfr-col-date"><col class="tfr-col-notam"><col class="tfr-col-facility"><col class="tfr-col-state"><col class="tfr-col-type"><col class="tfr-col-description"><col class="tfr-col-zoom"></colgroup>
+          <thead>
+            <tr>
+              <th scope="col" data-sort="date"><button type="button">Date <i class="fa-solid fa-sort sort-arrows" aria-hidden="true"></i></button></th>
+              <th scope="col" data-sort="notam"><button type="button">NOTAM <i class="fa-solid fa-sort sort-arrows" aria-hidden="true"></i></button></th>
+              <th scope="col" data-sort="facility"><button type="button">Facility <i class="fa-solid fa-sort sort-arrows" aria-hidden="true"></i></button></th>
+              <th scope="col" data-sort="state"><button type="button">State <i class="fa-solid fa-sort sort-arrows" aria-hidden="true"></i></button></th>
+              <th scope="col" data-sort="type"><button type="button">Type <i class="fa-solid fa-sort sort-arrows" aria-hidden="true"></i></button></th>
+              <th scope="col" data-sort="description"><button type="button">Description <i class="fa-solid fa-sort sort-arrows" aria-hidden="true"></i></button></th>
+              <th scope="col" class="zoom-heading">Zoom</th>
+            </tr>
+          </thead>
+          <tbody id="tfr-rows"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer class="tfr-footer">Stormworks only - not for public use</footer>
+</body>
+</html>
