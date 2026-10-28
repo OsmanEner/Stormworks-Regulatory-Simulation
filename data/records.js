@@ -17,7 +17,7 @@
 */
 
 const countyOrderSettings = {
-  judgeName: 'Alex Morgan',
+  judgeName: 'Barack H Obama II',
   contactName: 'County Communications Office'
 };
 
@@ -36,29 +36,24 @@ const countyRecords = {
 
   // ================= INTERMITTENT ROAD DELAYS ===================
   delays: [
-    /* COPY/PASTE EXAMPLE — remove the comment markers when publishing:
     {
       type: 'Primary Date',
-      date: 'Nov 10, 2026',
-      time: '9:00 a.m. to 12:00 p.m.'
+      date: 'October 28, 2026',
+      time: '3:30 a.m. to 5:00 a.m.'
     },
-    */
   ],
 
   // ================== PUBLISHED COUNTY ORDERS ===================
   orders: [
-    // ROAD DELAY ORDER — one text paragraph
-    /* COPY/PASTE EXAMPLE — remove the comment markers when publishing:
     {
       id: 'CC-2026-001',
       type: 'delay',
-      date: 'November 10, 2026',
+      date: 'October 28, 2026',
       title: 'TEMPORARY AND INTERMITTENT STATE HIGHWAY 4 ROAD DELAY',
       paragraphs: [
-        `Your road delay information goes here.`
+        `Please be advised that on October 18th, 2026, SpaceX will be conducting transportation operations on Highway 4 near Boca Chica sometime between 3:30 a.m. - 5:00 a.m. The beach and highway 4 will remain open throughout the operation; however, traffic may be delayed for a short duration.`
       ]
     },
-    */
 
     // FULL BEACH CLOSURE ORDER — FOUR text paragraphs
     /* COPY/PASTE EXAMPLE — remove the comment markers when publishing:
