@@ -247,6 +247,13 @@ a:hover { color: #1d58a1; }
 .order-endmark { position: absolute; left: 0; right: 0; text-align: center; font: bold 16px Times, serif; }
 .order-delay .order-endmark { top: 77.6%; }
 .order-closure .order-endmark { top: 88.6%; }
+/* This note is included on both the screen and the printed county order,
+   just above the courthouse contact columns without moving the page content. */
+.order-simulation-note {
+  position:absolute; left:0; right:0; bottom:0.93in;
+  color:#565656; text-align:center;
+  font:normal 12px/1.2 'Times New Roman', Times, serif;
+}
 .order-letterhead-footer {
   position: absolute; left: .96in; right: .93in; bottom: .25in;
   display: flex; align-items: flex-end; justify-content: space-between; gap: 12px;
