@@ -23,7 +23,16 @@ const tfrData = {
   asOfUTC: '—',
 
   records: [
-    // ============= COPY/PASTE TFR LIST EXAMPLE =============
+
+    {
+      date: '11/03/2026',
+      notam: '11/9001',
+      facility: 'ZHU',
+      state: 'TX',
+      type: 'SPACE OPERATIONS',
+      description: `BOCA CHICA, TX, Monday, November 9, 2026 through Monday, October 9, 00:01 UTC`
+    },
+
     /* REMOVE THESE COMMENT MARKERS TO PUBLISH:
     {
       date: '10/28/2026',

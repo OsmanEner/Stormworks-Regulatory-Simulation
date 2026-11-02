@@ -15,25 +15,23 @@
 */
 const tfrDetails = {
   // =========== COPY/PASTE FULL TFR DETAIL EXAMPLE ===========
-  /* REMOVE THESE COMMENT MARKERS TO PUBLISH:
-  '6/9001': {
-    issueDate: 'October 28, 2026 at 1409 UTC',
+
+  '11/9001': {
+    issueDate: 'Tuesday 3, 2026 at 23:33 UTC',
     location: 'BOCA CHICA, Texas near BROWNSVILLE, TX',
-    beginning: 'October 29, 2026 at 0500 UTC',
-    ending: 'October 30, 2026 at 0500 UTC',
-    reason: 'Temporary flight restrictions',
+    beginning: 'Monday 9, 2026 at 0001 UTC',
+    ending: 'Monday 9, 2026 at 2355 UTC',
+    reason: 'Starship Engine Static Fire',
     type: 'Space Operations',
 
-    center: `Near Boca Chica, Texas (enter your center coordinates or description)`,
-    radius: '3 nautical miles',
-    altitude: 'From the surface up to and including 10000 feet MSL',
+    center: `Near Boca Chica, Texas`,
+    radius: '8 nautical miles',
+    altitude: 'From the surface up to and including 13000 feet MSL',
 
-    effectiveFrom: 'October 29, 2026 at 0500 UTC',
-    effectiveTo: 'October 30, 2026 at 0500 UTC',
+    effectiveFrom: 'Monday 9, 2026 at 0001 UTC',
+    effectiveTo: 'Monday 9, 2026 at 2355 UTC',
 
-    pointOfContact: 'STORMWORKS LAUNCH OPERATIONS',
+    pointOfContact: 'Stormworks SpaceX',
     contactTelephone: '+1 202-555-0147'
   },
-  */
-  // ===========================================================
 };
