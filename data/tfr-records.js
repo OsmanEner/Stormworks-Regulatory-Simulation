@@ -20,7 +20,7 @@
 */
 const tfrData = {
   // Set this to the UTC publication timestamp when you add a TFR.
-  asOfUTC: '—',
+  asOfUTC: '23:37 UTC',
 
   records: [
 
