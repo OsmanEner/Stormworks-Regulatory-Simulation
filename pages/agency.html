@@ -39,6 +39,7 @@
       fcc: 'Federal Communications Commission'
     };
     const key = new URLSearchParams(location.search).get('agency');
+    if (key === 'faacst') { window.location.replace('faa-licenses.html'); }
     const name = names[key] || 'Agency';
     document.getElementById('name').textContent = name;
     document.title = name + ' — Simulation Portal';

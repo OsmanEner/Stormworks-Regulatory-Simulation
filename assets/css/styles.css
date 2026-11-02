@@ -615,3 +615,920 @@ a.tfr-detail-nav-row:hover { color:#fff; text-decoration:underline; }
  .atcscc-webinar-document { font-size:12px; }
  .atcscc-webinar-text,.atcscc-webinar-next-title,.atcscc-webinar-rawline { font-size:12px; }
 }
+
+
+/* ========== FCC LICENSE SEARCH / SIMULATION (V43) ==========
+   FCC-only selectors: intentionally do not alter any FAA, county, or portal styles. */
+.fcc-page { display:flex; flex-direction:column; min-height:100vh; color:#34404d; background:#f5f5f5; font-family:'Open Sans',Arial,Helvetica,sans-serif; }
+.fcc-header { height:60px; flex:0 0 60px; display:flex; align-items:center; justify-content:space-between; padding:0 15px; background:#00457d; color:white; }
+.fcc-brand { display:flex; align-items:center; gap:12px; color:white; font:700 20px/1.06 'Open Sans',Arial,sans-serif; }
+.fcc-insignia { width:58px; height:58px; flex:0 0 58px; }
+.fcc-header-nav { display:flex; align-items:center; font:500 14.5px 'Open Sans',Arial,sans-serif; }
+.fcc-header-nav a { color:white; text-decoration:none; }
+.fcc-header-nav a:hover,.fcc-header-nav a:focus-visible { text-decoration:underline; }
+.fcc-layout { flex:1 1 auto; display:grid; grid-template-columns:310px minmax(0,1fr); min-height:0; background:white; }
+.fcc-filters { background:#f2f2f2; min-width:0; }
+.fcc-search-caption { display:flex; align-items:center; justify-content:center; height:35px; border-top:1px solid #d2d9df; background:#034980; color:white; font:600 15px 'Open Sans',Arial,sans-serif; }
+.fcc-filter-inner { padding:0 16px 0; }
+.fcc-field { display:flex; flex-direction:column; gap:5px; margin-top:14px; }
+.fcc-field label { color:#29384b; font:600 14px 'Open Sans',Arial,sans-serif; }
+.fcc-field input,.fcc-field select { display:block; min-width:0; width:100%; height:35px; border:1px solid #ced7df; border-radius:3px; background:#fff; color:#304154; font:400 14px 'Open Sans',Arial,sans-serif; padding:5px 9px; }
+.fcc-field select { cursor:pointer; }
+.fcc-field input:focus-visible,.fcc-field select:focus-visible { outline:2px solid #2678b1; outline-offset:1px; }
+.fcc-query-field { margin-top:16px; }
+.fcc-data-links { display:flex; flex-direction:column; align-items:center; gap:19px; padding:24px 12px; }
+.fcc-data-links a { color:#1678e8; font:400 13.5px 'Open Sans',Arial,sans-serif; text-decoration:none; }
+.fcc-data-links a:hover { text-decoration:underline; }
+.fcc-results { min-width:0; min-height:0; display:flex; flex-direction:column; padding:0 16px 26px; background:white; }
+.fcc-info-bar { height:52px; flex:0 0 52px; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:0 2px; font:400 13px 'Open Sans',Arial,sans-serif; }
+.fcc-info-bar strong { font-weight:700; }
+.fcc-table-wrap { flex:1 1 auto; min-height:0; overflow:auto; }
+.fcc-table { border-collapse:collapse; table-layout:fixed; width:100%; min-width:850px; color:#354352; font:400 13.5px/1.25 'Open Sans',Arial,sans-serif; }
+.fcc-col-file { width:145px; }
+.fcc-col-call { width:128px; }
+.fcc-col-licensee { width:auto; }
+.fcc-col-state { width:85px; }
+.fcc-col-type { width:135px; }
+.fcc-col-status { width:115px; }
+.fcc-col-details { width:90px; }
+.fcc-table th { position:sticky; top:0; z-index:1; height:32px; text-align:left; padding:0 7px; white-space:nowrap; background:white; border-bottom:1px solid #d8e0e4; font-weight:700; }
+.fcc-table th button { display:flex; align-items:center; justify-content:space-between; gap:8px; width:100%; padding:0; border:0; background:transparent; color:#34404d; text-align:left; cursor:pointer; font:700 13.5px 'Open Sans',Arial,sans-serif; }
+.fcc-table th button .fa-sort { color:#b6bec3; font-size:11px; }
+.fcc-table td { height:39px; padding:0 7px; vertical-align:middle; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.fcc-table tbody tr:nth-child(odd) { background:#e1f7f9; }
+.fcc-table tbody tr:nth-child(even) { background:white; }
+.fcc-table tbody tr:hover { background:#d5f0f4; }
+.fcc-file-link,.fcc-file-text { color:#1684f2; text-decoration:none; }
+.fcc-file-link:hover { text-decoration:underline; }
+.fcc-file-text { cursor:default; }
+.fcc-table th.fcc-details-heading,.fcc-details-cell { text-align:center; }
+.fcc-details-icon { color:#1264a1; pointer-events:none; user-select:none; font-size:18px; }
+.fcc-footer { flex:0 0 48px; display:flex; align-items:center; justify-content:center; padding:10px; background:#c96666; color:#fff; text-align:center; font:14px 'Open Sans',Arial,sans-serif; }
+@media (max-width:900px) {
+  .fcc-layout { grid-template-columns:220px minmax(0,1fr); }
+  .fcc-filter-inner { padding:0 10px; }
+  .fcc-results { padding-left:10px; padding-right:10px; }
+}
+@media (max-width:600px) {
+  .fcc-header { padding:0 10px; }
+  .fcc-brand { font-size:15px; gap:6px; }
+  .fcc-insignia { width:45px; height:45px; flex-basis:45px; }
+  .fcc-layout { display:flex; flex-direction:column; }
+  .fcc-filter-inner { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 10px; }
+  .fcc-results { min-height:240px; }
+}
+
+
+/* ===== FCC LICENSE / APPLICATION DETAIL ONLY (V47) =====
+   Deliberately scoped to the new page: no changes to FAA, FCC search, or other pages. */
+.fcc-application-page [hidden] { display:none !important; }
+.fcc-application-main { width:min(1020px,calc(100% - 42px)); margin:0 auto; flex:1 0 auto; padding:25px 0 48px; background:transparent; }
+.fcc-application-back { display:inline-block; margin:0 0 20px; color:#0069b8; font:400 14px 'Kanit',Arial,sans-serif; text-decoration:underline; text-underline-offset:2px; }
+.fcc-application-document { border:1px solid #b3c1ce; background:white; color:#26384a; }
+.fcc-application-document h1 { margin:0; padding:16px 22px; border-bottom:2px solid #00457d; color:#003d70; background:#e7f0f6; font:700 22px/1.35 'Open Sans',Arial,sans-serif; }
+.fcc-application-section { padding:0 22px 22px; border-bottom:1px solid #d1dbe3; }
+.fcc-application-section:last-child { border-bottom:0; }
+.fcc-application-section h2 { margin:0 -22px 16px; padding:11px 22px; color:#003c6f; background:#f0f3f6; border-bottom:1px solid #d9e1e8; font:700 15px/1.3 'Open Sans',Arial,sans-serif; }
+.fcc-application-fields { display:grid; grid-template-columns:1fr 1fr; gap:13px 36px; margin:0; }
+.fcc-application-fields>div { display:grid; grid-template-columns:155px minmax(0,1fr); gap:12px; align-items:baseline; min-width:0; }
+.fcc-application-fields dt { font-weight:700; font-size:13px; }
+.fcc-application-fields dd { margin:0; overflow-wrap:anywhere; font-size:14px; }
+.fcc-application-multiline>div { white-space:pre-wrap; overflow-wrap:anywhere; font:400 14px/1.6 'Open Sans',Arial,sans-serif; }
+.fcc-application-prompt { margin:0 0 12px; font:700 14px/1.6 'Open Sans',Arial,sans-serif; }
+@media(max-width:750px) {
+  .fcc-application-fields { grid-template-columns:1fr; }
+  .fcc-application-main { width:calc(100% - 24px); }
+  .fcc-application-fields>div { grid-template-columns:minmax(110px,36%) minmax(0,1fr); }
+}
+
+/* FCC license detail: place seal in existing titlebar; align PDF action with back link.
+   Scoped exclusively to the FCC application page. */
+.fcc-application-page .fcc-application-actions { display:flex; justify-content:space-between; align-items:center; gap:16px; }
+.fcc-application-page .fcc-application-download { display:inline-block; margin:0 0 20px; color:#0069b8; font:400 14px 'Kanit',Arial,sans-serif; text-decoration:underline; text-underline-offset:2px; }
+.fcc-application-page .fcc-application-download:hover,.fcc-application-page .fcc-application-download:focus-visible { color:#00457d; }
+.fcc-application-page .fcc-application-document h1 { position:relative; padding-right:92px; }
+.fcc-application-page .fcc-application-seal { position:absolute; right:20px; top:50%; transform:translateY(-50%); width:49px; height:49px; object-fit:contain; }
+
+/* FCC application Manufacturer section only (V53). */
+.fcc-application-page .fcc-application-manufacturer .fcc-application-prompt { margin-bottom:10px; }
+.fcc-application-page .fcc-application-equipment-scroll { overflow-x:auto; }
+.fcc-application-page .fcc-application-equipment-table {
+  width:100%; min-width:510px; border-collapse:collapse; table-layout:fixed;
+  color:#26384a; font:400 14px/1.55 'Open Sans',Arial,sans-serif;
+}
+.fcc-application-page .fcc-application-equipment-table th,
+.fcc-application-page .fcc-application-equipment-table td {
+  padding:3px 12px 3px 0; text-align:left; vertical-align:top;
+  overflow-wrap:anywhere; border:0;
+}
+.fcc-application-page .fcc-application-equipment-table th { font-weight:700; font-size:13px; }
+.fcc-application-page .fcc-application-equipment-table th:nth-child(1) { width:46%; }
+.fcc-application-page .fcc-application-equipment-table th:nth-child(2) { width:29%; }
+.fcc-application-page .fcc-application-equipment-table th:nth-child(3) { width:13%; }
+.fcc-application-page .fcc-application-equipment-table th:nth-child(4) { width:12%; }
+
+
+/* FCC application Station Location only (V54): keep all other site styles unchanged. */
+.fcc-application-page .fcc-application-station-list { display:grid; gap:18px; }
+.fcc-application-page .fcc-station-entry + .fcc-station-entry { border-top:1px solid #d1dbe3; padding-top:18px; }
+.fcc-application-page .fcc-station-basics-scroll { overflow-x:auto; margin-bottom:10px; }
+.fcc-application-page .fcc-station-basics { width:100%; min-width:680px; table-layout:fixed; border-collapse:collapse; font:400 13px/1.5 'Open Sans',Arial,sans-serif; color:#26384a; }
+.fcc-application-page .fcc-station-basics th,
+.fcc-application-page .fcc-station-basics td { padding:2px 10px 2px 0; vertical-align:top; text-align:left; overflow-wrap:anywhere; border:0; }
+.fcc-application-page .fcc-station-basics th { font-weight:700; }
+.fcc-application-page .fcc-station-basics th:nth-child(1) { width:17%; }
+.fcc-application-page .fcc-station-basics th:nth-child(2) { width:13%; }
+.fcc-application-page .fcc-station-basics th:nth-child(3) { width:19%; }
+.fcc-application-page .fcc-station-basics th:nth-child(4) { width:19%; }
+.fcc-application-page .fcc-station-basics th:nth-child(5) { width:12%; }
+.fcc-application-page .fcc-station-basics th:nth-child(6) { width:20%; }
+.fcc-application-page .fcc-station-facts { margin:0; display:grid; gap:3px; font:400 13px/1.55 'Open Sans',Arial,sans-serif; }
+.fcc-application-page .fcc-station-facts > div { display:flex; flex-wrap:wrap; column-gap:8px; align-items:baseline; }
+.fcc-application-page .fcc-station-facts dt { margin:0; font-weight:700; }
+.fcc-application-page .fcc-station-facts dd { margin:0; white-space:pre-wrap; overflow-wrap:anywhere; }
+
+/* FCC Station Location: Action / Frequency / Station Class only (V55).
+   Scoped exclusively to these rows; no other layout or text changes. */
+.fcc-application-page .fcc-station-frequencies-scroll { overflow-x:auto; margin-top:10px; }
+.fcc-application-page .fcc-station-frequency-table {
+  width:100%; min-width:390px; table-layout:fixed; border-collapse:collapse;
+  font:400 13px/1.5 'Open Sans',Arial,sans-serif; color:#26384a;
+}
+.fcc-application-page .fcc-station-frequency-table th,
+.fcc-application-page .fcc-station-frequency-table td {
+  padding:2px 10px 2px 0; text-align:left; vertical-align:top;
+  overflow-wrap:anywhere; border:0;
+}
+.fcc-application-page .fcc-station-frequency-table th { font-weight:700; }
+.fcc-application-page .fcc-station-frequency-table th:nth-child(1) { width:20%; }
+.fcc-application-page .fcc-station-frequency-table th:nth-child(2) { width:54%; }
+.fcc-application-page .fcc-station-frequency-table th:nth-child(3) { width:26%; }
+
+
+/* ============ FAA COMMERCIAL SPACE TRANSPORTATION (V56) ============
+   Scoped exclusively to the new FAA AST pages; TFR, NASS, FCC and County unchanged. */
+.faa-cst-page { min-height:100vh; display:flex; flex-direction:column; font-family:'Open Sans',Arial,Helvetica,sans-serif; background:#fff; color:#34404d; }
+.faa-cst-main { flex:1 1 auto; width:min(1130px,calc(100% - 40px)); margin:0 auto; padding:46px 0 70px; }
+.faa-cst-main h1 { margin:0; font:700 clamp(23px,2.4vw,31px)/1.3 'Open Sans',Arial,sans-serif; color:#253b51; }
+.faa-cst-rule { height:2px; background:#00457d; width:100%; margin:17px 0 25px; }
+.faa-cst-main p { font:400 14px/1.65 'Open Sans',Arial,sans-serif; margin:0 0 15px; }
+.faa-cst-directory { border-top:1px solid #d6dfe6; width:100%; }
+.faa-cst-directory a { display:flex; justify-content:space-between; align-items:center; gap:18px; color:#0964ac; text-decoration:none; font:500 16px 'Open Sans',Arial,sans-serif; min-height:66px; padding:15px 12px; border-bottom:1px solid #d6dfe6; }
+.faa-cst-directory a:hover,.faa-cst-directory a:focus-visible { background:#eef5f9; text-decoration:underline; }
+.faa-cst-directory i { font-size:12px; color:#0964ac; }
+.faa-cst-empty { margin-top:6px; color:#5a6773; }
+@media (max-width:600px) {
+  .faa-cst-page .faa-header { height:auto; min-height:60px; padding:8px 10px; gap:8px; flex-wrap:wrap; }
+  .faa-cst-page .faa-header-nav { gap:12px; flex-wrap:wrap; justify-content:flex-end; font-size:11.5px; }
+  .faa-cst-page .faa-brand { font-size:14px; }
+  .faa-cst-page .faa-insignia { width:42px; height:42px; flex-basis:42px; }
+  .faa-cst-main { padding-top:33px; }
+}
+
+
+/* ============ FAA CST LICENSE DATABASE ONLY (V57) ============
+   Restricted to .faa-license-page: no other pages change style or layout. */
+.faa-license-page .faa-lic-main { flex:1 1 auto; display:flex; flex-direction:column; min-height:0; width:100%; background:#fff; color:#1d293b; font-family:'Open Sans',Arial,sans-serif; }
+.faa-license-page .faa-lic-grid { display:grid; grid-template-columns:260px minmax(0,1fr); flex:1 1 auto; min-height:0; }
+.faa-license-page .faa-lic-sidebar { padding:18px 15px 8px; min-width:0; }
+.faa-license-page .faa-lic-tabs { display:flex; flex-direction:column; gap:10px; }
+.faa-license-page .faa-lic-tab { display:block; width:100%; min-height:52px; padding:10px 9px; border:0; border-radius:0; background:#606a73; color:white; cursor:pointer; text-align:center; font:400 15px/1.3 'Open Sans',Arial,sans-serif; }
+.faa-license-page .faa-lic-tab.is-active { background:#06477f; text-decoration:underline; }
+.faa-license-page .faa-lic-tab:hover,.faa-license-page .faa-lic-tab:focus-visible { background:#0d548b; }
+.faa-license-page .faa-lic-tab-gap { height:29px; }
+.faa-license-page .faa-lic-content { padding:22px 21px 18px 14px; min-width:0; }
+.faa-license-page .faa-lic-table-scroll { max-width:100%; overflow:auto; }
+.faa-license-page .faa-lic-table { border-collapse:collapse; width:100%; min-width:770px; table-layout:fixed; font:400 13px/1.25 'Open Sans',Arial,sans-serif; color:#14263b; }
+.faa-license-page .faa-lic-table th { padding:7px 8px 12px; background:white; color:#111e31; text-align:left; border:0; vertical-align:bottom; font:700 13px/1.3 'Open Sans',Arial,sans-serif; }
+.faa-license-page .faa-lic-sort { display:block; padding:0; border:0; background:none; color:inherit; text-align:left; font:inherit; cursor:pointer; }
+.faa-license-page .faa-lic-sort:hover,.faa-license-page .faa-lic-sort:focus-visible { text-decoration:underline; }
+.faa-license-page .faa-lic-table td { padding:6px 8px; border:0; vertical-align:middle; font-weight:400; overflow-wrap:break-word; }
+.faa-license-page .faa-lic-table tbody tr:nth-child(2n) { background:#d6dadc; }
+.faa-license-page .faa-lic-table tbody tr:nth-child(2n+1) { background:#fff; }
+.faa-license-page .faa-lic-table tbody tr:hover { background:#e4edf5; }
+.faa-license-page .faa-lic-table td.faa-lic-empty { text-align:center; padding:30px 10px; color:#536271; background:#fff; }
+.faa-license-page .faa-lic-pdf-link { color:#003e79; text-decoration:none; }
+.faa-license-page .faa-lic-pdf-link:hover,.faa-license-page .faa-lic-pdf-link:focus-visible { text-decoration:underline; }
+.faa-license-page .faa-lic-bottom { display:grid; grid-template-columns:260px minmax(0,1fr); gap:0; width:100%; align-items:end; padding:15px 0 18px; }
+.faa-license-page .faa-lic-last-updated { margin-left:15px; color:#2b455f; font:400 12.5px/1.35 'Open Sans',Arial,sans-serif; }
+.faa-license-page .faa-lic-utc-clock { justify-self:end; margin-right:21px; display:inline-flex; align-items:center; justify-content:center; padding:5px 8px; white-space:nowrap; background:#ffbb59; color:#143150; font:600 13px/1.3 'Open Sans',Arial,sans-serif; font-variant-numeric:tabular-nums; }
+@media(max-width:790px) {
+ .faa-license-page .faa-lic-grid { grid-template-columns:190px minmax(0,1fr); }
+ .faa-license-page .faa-lic-bottom { grid-template-columns:190px minmax(0,1fr); }
+ .faa-license-page .faa-lic-sidebar { padding-left:8px; padding-right:8px; }
+ .faa-license-page .faa-lic-content { padding-left:8px; padding-right:8px; }
+}
+@media(max-width:540px) {
+ .faa-license-page .faa-lic-grid { display:flex; flex-direction:column; }
+ .faa-license-page .faa-lic-sidebar { padding:12px; }
+ .faa-license-page .faa-lic-tabs { flex-direction:row; flex-wrap:wrap; gap:7px; }
+ .faa-license-page .faa-lic-tab { width:auto; flex:1 1 135px; min-height:42px; font-size:13px; }
+ .faa-license-page .faa-lic-tab-gap { flex-basis:100%; height:0; }
+ .faa-license-page .faa-lic-content { padding:10px 12px 30px; }
+ .faa-license-page .faa-lic-bottom { grid-template-columns:1fr; row-gap:14px; padding-bottom:15px; }
+ .faa-license-page .faa-lic-utc-clock { margin-right:12px; }
+}
+
+
+/* ============ FAA STAKEHOLDER ENGAGEMENT MODULAR CONTENT (V58) ============
+   Only the content below the existing page title/rule; no changes elsewhere. */
+.faa-stakeholder-page .faa-modular-content[hidden] { display:none; }
+.faa-stakeholder-page #faa-modular-unpublished[hidden] { display:none; }
+.faa-stakeholder-page .faa-modular-content {
+  /* Keep the original title alignment. Flex prevents adjacent vertical margins
+     from collapsing, so spacingBefore and spacingAfter add predictably. */
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  padding:0;
+  font-family:'Open Sans',Arial,Helvetica,sans-serif;
+  color:#34404d;
+  text-align:left;
+}
+.faa-stakeholder-page .faa-modular-block {
+  font-family:inherit;
+  white-space:pre-wrap;
+  overflow-wrap:anywhere;
+  text-align:left;
+}
+.faa-stakeholder-page .faa-modular-heading {
+  margin:0 0 13px;
+  color:#253b51;
+  font-size:19px;
+  font-weight:700;
+  line-height:1.4;
+}
+.faa-stakeholder-page .faa-modular-paragraph {
+  margin:0 0 18px;
+  font-size:14px;
+  font-weight:400;
+  line-height:1.65;
+}
+.faa-stakeholder-page .faa-modular-link {
+  display:table;
+  align-self:flex-start;
+  margin:0 0 17px;
+  color:#0964ac;
+  text-decoration:underline;
+  font-size:14px;
+  font-weight:400;
+  line-height:1.5;
+}
+.faa-stakeholder-page .faa-modular-button {
+  display:table;
+  align-self:flex-start;
+  max-width:100%;
+  padding:8px 13px;
+  margin:0 0 18px;
+  border:1px solid var(--faa-modular-button-background,#00457d);
+  background:var(--faa-modular-button-background,#00457d);
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+  line-height:1.4;
+}
+.faa-stakeholder-page .faa-modular-button:hover,
+.faa-stakeholder-page .faa-modular-button:focus-visible { background:var(--faa-modular-button-hover,#0b578e); }
+.faa-stakeholder-page .faa-modular-divider {
+  border:0;
+  border-top:1px solid #bdcbd6;
+  margin:15px 0 19px;
+}
+
+
+/* V62 — Agency name labels only. Navigation, body copy, page headings and
+   existing masthead colors/icons retain their original styling. */
+.faa-brand .agency-brand-label,
+.fcc-brand .agency-brand-label {
+  display:block;
+  white-space:nowrap;
+}
+/* Two-line Cameron County label; preserve the original blue/white word colors. */
+.county-header .county-logo {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  line-height:1.04;
+}
+.county-header .county-logo .county-name-line { display:block; white-space:nowrap; }
+.county-header .county-logo .county-name-line > span:first-child { color:#288bd4; }
+.county-header .county-logo .county-simulation-line {
+  display:block;
+  color:#fff;
+  font:700 20px/1.1 'Lexend',Arial,sans-serif;
+  letter-spacing:-.5px;
+  padding-top:4px;
+}
+/* Only agency brand labels scale down on narrow viewports. */
+@media(max-width:870px) {
+  .faa-header .faa-brand .agency-brand-label,
+  .fcc-header .fcc-brand .agency-brand-label { white-space:normal; font-size:15px; line-height:1.05; }
+}
+@media(max-width:600px) {
+  .faa-header .faa-brand .agency-brand-label,
+  .fcc-header .fcc-brand .agency-brand-label { font-size:13px; }
+  .county-header .county-logo .county-simulation-line { font-size:13px; }
+}
+
+/* V63 — Cameron County masthead only: restore original ✶ symbol,
+   uppercase both lines, and use the same Lexend family throughout. */
+.county-header .county-logo .county-name-line {
+  font:700 29px/1.08 'Lexend',Arial,sans-serif;
+  letter-spacing:-1.2px;
+}
+.county-header .county-logo .county-name-line .logo-star {
+  color:#fff;
+  font-size:29px;
+  margin-left:4px;
+}
+@media(max-width:1000px) {
+  .county-header .county-logo .county-name-line { font-size:23px; }
+  .county-header .county-logo .county-name-line .logo-star { font-size:23px; }
+  .county-header .county-logo .county-simulation-line { font-size:17px; }
+}
+@media(max-width:600px) {
+  .county-header .county-logo .county-name-line { font-size:23px; }
+  .county-header .county-logo .county-name-line .logo-star { font-size:23px; }
+  .county-header .county-logo .county-simulation-line { font-size:18px; }
+}
+
+
+/* V64 — FAA environmental-project pages only. Never affects the FAA license,
+   stakeholder, FCC, county, or ATCSCC pages. */
+.faa-env-project-page .faa-env-main {
+  /* Match FAA Stakeholder Engagement: same centered content width and inset. */
+  width: min(1130px, calc(100% - 40px));
+  margin: 0 auto;
+  flex: 1 1 auto;
+  padding: 46px 0 70px;
+  font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+  color: #183a6e;
+}
+.faa-env-project-page .faa-env-main [hidden] { display:none !important; }
+.faa-env-project-page .faa-env-main h1 {
+  margin:0 0 24px;
+  color:#153d7c;
+  font:400 clamp(25px,2.25vw,33px)/1.18 'Open Sans',Arial,sans-serif;
+  overflow-wrap:anywhere;
+}
+.faa-env-project-page .faa-env-layout {
+  display:grid;
+  grid-template-columns:minmax(0, 1fr) 285px;
+  column-gap:26px;
+  align-items:start;
+}
+.faa-env-project-page .faa-env-left { min-width:0; }
+.faa-env-project-page .faa-env-website {
+  margin:4px 0 27px;
+  font-size:14px;
+  color:#122f5a;
+}
+.faa-env-project-page .faa-env-website strong {font-weight:400;}
+.faa-env-project-page .faa-env-website a,
+.faa-env-project-page .faa-env-related a {color:#0869a8; text-decoration:none;}
+.faa-env-project-page .faa-env-website a:hover,
+.faa-env-project-page .faa-env-related a:hover {text-decoration:underline;}
+.faa-env-project-page .faa-env-intro {
+  font:700 14px/1.5 'Open Sans',Arial,sans-serif;
+  margin:0 0 12px;
+  color:#0c1725;
+}
+.faa-env-project-page .faa-env-primary-stats {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  text-align:center;
+  padding:5px 0 26px;
+  border-bottom:1px solid #c9cdd0;
+}
+.faa-env-project-page .faa-env-primary-stat,
+.faa-env-project-page .faa-env-secondary-stat {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  gap:5px;
+  min-width:0;
+}
+.faa-env-project-page .faa-env-stat-icon {height:90px; color:#067ab9; display:grid; place-items:center;}
+.faa-env-project-page .faa-env-stat-label {
+  max-width:370px;
+  font:400 14px/1.45 'Open Sans',Arial,sans-serif;
+  color:#17345e;
+}
+.faa-env-project-page .faa-env-stat-value {font:400 14px/1.45 'Open Sans',Arial,sans-serif;color:#17345e;}
+.faa-env-project-page .faa-env-secondary-stats {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:15px;
+  text-align:center;
+  padding:20px 0 4px;
+}
+.faa-env-project-page .faa-env-progress {
+  width:75px;height:75px;border:8px solid #077bbb;border-radius:50%;
+  background:#d9e4e9;color:#192f42;
+  display:grid;place-items:center;font:700 15px/1.2 'Open Sans',Arial,sans-serif;
+}
+.faa-env-project-page .faa-env-secondary-icon {
+  height:75px;color:#0575b7;display:flex;justify-content:center;align-items:center;
+  font:400 65px/1 Arial,sans-serif;
+}
+.faa-env-project-page .faa-env-agency-mark {font-size:60px;color:#243b5c;}
+.faa-env-project-page .faa-env-secondary-label {font:400 13px/1.5 'Open Sans',Arial,sans-serif;}
+.faa-env-project-page .faa-env-secondary-value {font:400 13px/1.4 'Open Sans',Arial,sans-serif;}
+.faa-env-project-page .faa-env-description h2,
+.faa-env-project-page .faa-env-related h2 {
+  margin:13px 0 6px;font:700 19px/1.3 'Open Sans',Arial,sans-serif;color:#15417d;
+}
+.faa-env-project-page .faa-env-description p,
+.faa-env-project-page .faa-env-related p {
+  margin:0 0 15px;white-space:pre-wrap;color:#213047;
+  font:400 14px/1.64 'Open Sans',Arial,sans-serif;
+}
+.faa-env-project-page .faa-env-blue-sidebar {
+  min-height:530px;
+  background:#0877bd;
+  padding:0;
+  overflow:hidden;
+}
+.faa-env-project-page .faa-env-error {margin:10px 0;color:#6b3535;}
+@media(max-width:870px){
+ .faa-env-project-page .faa-env-layout {grid-template-columns:minmax(0,1fr) 220px;gap:15px;}
+ .faa-env-project-page .faa-env-blue-sidebar{min-height:430px;}
+}
+@media(max-width:650px){
+ .faa-env-project-page .faa-env-layout {grid-template-columns:1fr;}
+ .faa-env-project-page .faa-env-blue-sidebar {min-height:250px; margin-top:16px;}
+ .faa-env-project-page .faa-env-primary-stats {gap:12px;}
+ .faa-env-project-page .faa-env-secondary-stats {grid-template-columns:1fr 1fr;}
+}
+
+
+/* V66 — Environmental project page only. Slightly larger readable metrics and
+ * reference-style icons. No changes to other FAA/FCC/NASS or county pages. */
+.faa-env-project-page .faa-env-main h1 {
+  font-size: clamp(26px, 2.35vw, 36px);
+}
+.faa-env-project-page .faa-env-layout {
+  grid-template-columns: minmax(0, 1fr) 240px;
+  column-gap: 22px;
+}
+.faa-env-project-page .faa-env-website { font-size:15px; }
+.faa-env-project-page .faa-env-intro { font-size:15px; }
+.faa-env-project-page .faa-env-stat-icon { height:104px; }
+.faa-env-project-page .faa-env-stat-label { font-size:15px; }
+.faa-env-project-page .faa-env-stat-value { font-size:15px; }
+.faa-env-project-page .faa-env-secondary-stats { gap:12px; }
+.faa-env-project-page .faa-env-secondary-icon { height:94px; font-size:70px; }
+.faa-env-project-page .faa-env-secondary-icon .faa-env-detail-icon { display:block; width:88px; height:88px; }
+.faa-env-project-page .faa-env-agency-mark img { width:86px; height:86px; object-fit:contain; display:block; }
+.faa-env-project-page .faa-env-progress {
+  width:90px;
+  height:90px;
+  border-width:7px;
+  font-size:14px;
+  text-align:center;
+}
+.faa-env-project-page .faa-env-progress-copy {
+  display:block;
+  max-width:100%;
+  font:700 13px/1.1 'Open Sans',Arial,sans-serif;
+  white-space:pre-line;
+  text-align:center;
+  overflow-wrap:normal;
+}
+.faa-env-project-page .faa-env-secondary-label { font-size:14px; }
+.faa-env-project-page .faa-env-secondary-value { font-size:14px; }
+.faa-env-project-page .faa-env-description h2,
+.faa-env-project-page .faa-env-related h2 { font-size:21px; }
+.faa-env-project-page .faa-env-description p,
+.faa-env-project-page .faa-env-related p { font-size:15px; }
+@media (max-width:870px) {
+  .faa-env-project-page .faa-env-layout {
+    grid-template-columns:minmax(0,1fr) 185px;
+    gap:15px;
+  }
+}
+@media (max-width:650px) {
+  .faa-env-project-page .faa-env-layout { grid-template-columns:1fr; }
+}
+
+
+/* V67 — Environmental PROJECT detail pages only. Stakeholder modular content,
+ * its styles and every other agency remain unchanged. */
+.faa-env-project-page .faa-env-progress {
+  width:96px;
+  height:96px;
+  border:9px solid #087dbd;
+  background:#d9e4e9;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+}
+.faa-env-project-page .faa-env-progress-copy {
+  font-family:'Open Sans',Arial,Helvetica,sans-serif;
+  font-size:17px;
+  font-weight:700;
+  line-height:1.12;
+  color:#203446;
+  text-align:center;
+  white-space:pre-line;
+  max-width:calc(100% - 7px);
+}
+.faa-env-project-page #faa-env-description-text {
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  text-align:left;
+  font-family:'Open Sans',Arial,Helvetica,sans-serif;
+}
+.faa-env-project-page .faa-env-description-block {
+  font-family:inherit;
+  white-space:pre-wrap;
+  overflow-wrap:anywhere;
+  text-align:left;
+}
+.faa-env-project-page .faa-env-description h3.faa-env-description-heading {
+  margin:10px 0 9px;
+  font-size:19px;
+  font-weight:700;
+  line-height:1.4;
+  color:#173c71;
+}
+.faa-env-project-page .faa-env-description p.faa-env-description-paragraph {
+  margin:0 0 15px;
+  font-size:15px;
+  font-weight:400;
+  line-height:1.64;
+  color:#213047;
+}
+.faa-env-project-page .faa-env-description a.faa-env-description-link {
+  display:table;
+  align-self:flex-start;
+  margin:0 0 17px;
+  font-size:15px;
+  font-weight:400;
+  line-height:1.5;
+  color:#0964ac;
+  text-decoration:underline;
+}
+.faa-env-project-page .faa-env-description a.faa-env-description-button {
+  display:table;
+  align-self:flex-start;
+  max-width:100%;
+  margin:0 0 18px;
+  padding:8px 13px;
+  border:1px solid var(--faa-env-button-background,#00457d);
+  background:var(--faa-env-button-background,#00457d);
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+  line-height:1.4;
+}
+.faa-env-project-page .faa-env-description a.faa-env-description-button:hover,
+.faa-env-project-page .faa-env-description a.faa-env-description-button:focus-visible {
+  background:var(--faa-env-button-hover,#0b578e);
+}
+.faa-env-project-page .faa-env-description-divider {
+  width:100%;
+  margin:2px 0 17px;
+  border:0;
+  border-top:1px solid #bdcbd6;
+}
+
+
+/* V68 — FAA environmental project pages only. Match all four metrics icon sizes
+   and add muted gray side gutters without touching other FAA pages. */
+body.faa-env-project-page {
+  background:#e4e4e8;
+}
+.faa-env-project-page .faa-env-main {
+  background:#fff;
+}
+.faa-env-project-page .faa-env-progress {
+  width:88px;
+  height:88px;
+  border-width:8px;
+  margin:3px 0; /* occupy the same 94px icon row as the other metric icons */
+}
+
+
+/* V69 — environmental-project pages only. Preserve the existing 1130px inner
+   content width while adding a 20px white inset around it. The shared utility
+   header is left unmodified; project HTML now loads its same font/icon assets. */
+.faa-env-project-page .faa-env-main {
+  width:min(1170px,calc(100% - 20px));
+  padding:46px 20px 70px;
+}
+/* Slightly reduce only the progress ring, not the other three metric icons. */
+.faa-env-project-page .faa-env-progress {
+  width:80px;
+  height:80px;
+  border-width:7px;
+  margin:7px 0;
+}
+.faa-env-project-page .faa-env-progress-copy {
+  font-size:15px;
+  line-height:1.08;
+}
+
+
+/* V70 — Timetable is scoped STRICTLY to the FAA environmental project pages.
+   It does not affect Stakeholder Engagement, licenses or other agency tables. */
+.faa-env-project-page .faa-env-timetable { margin-top:30px; }
+.faa-env-project-page .faa-env-timetable h2 {
+  margin:0 0 14px;
+  font:700 21px/1.3 'Open Sans',Arial,sans-serif;
+  color:#15417d;
+}
+.faa-env-project-page .faa-env-timetable-scroll {max-width:100%;overflow-x:auto;}
+.faa-env-project-page .faa-env-timetable-chart {min-width:780px; font:400 12px/1.4 'Open Sans',Arial,sans-serif; color:#203a58;}
+.faa-env-project-page .faa-env-time-gridrow {
+  display:grid;
+  grid-template-columns:165px minmax(490px,1fr) 104px;
+  gap:8px;
+  align-items:center;
+}
+.faa-env-project-page .faa-env-time-axis {height:54px;}
+.faa-env-project-page .faa-env-time-track {min-width:0;position:relative;}
+.faa-env-project-page .faa-env-time-axis-track {height:100%;border-bottom:1px solid #8995a0;}
+.faa-env-project-page .faa-env-time-tick-label {
+  position:absolute; top:7px; transform:translateX(-50%);
+  white-space:nowrap; color:#31506d; font-size:11px;
+}
+.faa-env-project-page .faa-env-time-tick-first {transform:translateX(-5%);}
+.faa-env-project-page .faa-env-time-tick-last {transform:translateX(-95%);}
+.faa-env-project-page .faa-env-time-statuslabel {text-align:left;font-weight:600;letter-spacing:.04em;}
+.faa-env-project-page .faa-env-time-row {min-height:45px;}
+.faa-env-project-page .faa-env-time-rowlabel {color:#075994;font-size:12px;line-height:1.3;overflow-wrap:anywhere;text-align:right;}
+.faa-env-project-page .faa-env-time-row-track {height:45px;border-left:1px solid #bbc2c8;border-right:1px solid #bbc2c8;}
+.faa-env-project-page .faa-env-time-grid {position:absolute;inset:0;pointer-events:none;}
+.faa-env-project-page .faa-env-time-gridline {position:absolute;top:0;bottom:0;border-left:1px dotted #b7bcc4;}
+.faa-env-project-page .faa-env-time-bar {position:absolute;top:13px;height:20px;box-sizing:border-box;z-index:1;}
+.faa-env-project-page .faa-env-time-bar-scheduled {background:#007ac0;}
+.faa-env-project-page .faa-env-time-bar-extension {background:#d7dbe0;border:1px solid #88929b;}
+.faa-env-project-page .faa-env-time-bar-paused {background:#fff;border:2px solid #078acb;}
+.faa-env-project-page .faa-env-time-bar-planned {border:1px solid #007ac0;
+  background:repeating-linear-gradient(125deg,#c5e6fa 0px,#c5e6fa 2px,#0787ca 2px,#0787ca 3px,#f5fbff 3px,#f5fbff 6px);}
+.faa-env-project-page .faa-env-time-status {font-size:12px;color:#254461;}
+.faa-env-project-page .faa-env-time-today-line {position:absolute;top:0;bottom:0;border-left:2px solid #6cc5ed;z-index:4;pointer-events:none;}
+.faa-env-project-page .faa-env-time-today-caption {position:absolute;bottom:19px;font:700 11px/1.2 'Open Sans',Arial,sans-serif;color:#007ab8;transform:translateX(-50%);white-space:nowrap;}
+.faa-env-project-page .faa-env-time-today-arrow {position:absolute;bottom:-2px;transform:translateX(-50%);color:#6cc5ed;font-size:16px;line-height:1;}
+.faa-env-project-page .faa-env-timetable-note {font:400 11px/1.45 'Open Sans',Arial,sans-serif;color:#586879;margin:10px 0 14px;}
+.faa-env-project-page .faa-env-timetable-legend {display:flex;flex-wrap:wrap;gap:13px 20px;align-items:center;padding:8px 0 0;}
+.faa-env-project-page .faa-env-timetable-legend span {display:inline-flex;align-items:center;gap:7px;font:400 12px/1.4 'Open Sans',Arial,sans-serif;color:#29425e;}
+.faa-env-project-page .faa-env-swatch {display:inline-block;width:19px;height:15px;box-sizing:border-box;}
+.faa-env-project-page .faa-env-swatch-scheduled {background:#007ac0;}
+.faa-env-project-page .faa-env-swatch-extension {background:#d7dbe0;border:1px solid #88929b;}
+.faa-env-project-page .faa-env-swatch-paused {border:2px solid #078acb;}
+.faa-env-project-page .faa-env-swatch-planned {border:1px solid #007ac0;background:repeating-linear-gradient(125deg,#c5e6fa 0px,#c5e6fa 2px,#0787ca 2px,#0787ca 3px,#f5fbff 3px,#f5fbff 6px);}
+.faa-env-project-page .faa-env-time-empty {font-size:12px;color:#51647a;margin:16px 0;}
+
+
+/* V71 — faithful Permitting Timetable refinement (scoped only to environmental projects). */
+.faa-env-project-page .faa-env-timetable {margin-top:36px;}
+.faa-env-project-page .faa-env-timetable h2 {
+  font:700 21px/1.3 'Open Sans',Arial,sans-serif;
+  margin:0 0 8px;
+}
+.faa-env-project-page .faa-env-timetable-lead {
+  font:400 14px/1.55 'Open Sans',Arial,sans-serif;
+  color:#273343;margin:0 0 15px;
+}
+.faa-env-project-page .faa-env-timetable-guidance {
+  font:400 14px/1.5 'Open Sans',Arial,sans-serif;
+  color:#273343;list-style:disc;margin:0 0 25px;padding:0 0 0 30px;
+}
+.faa-env-project-page .faa-env-timetable-chart {
+  min-width:790px;
+  font:400 12px/1.4 'Open Sans',Arial,sans-serif;
+  color:#203b5a;
+}
+.faa-env-project-page .faa-env-time-gridrow {
+  grid-template-columns:175px minmax(475px,1fr) 106px;
+  column-gap:11px;
+}
+.faa-env-project-page .faa-env-time-axis {height:53px;}
+.faa-env-project-page .faa-env-time-axis-track {
+  border-bottom:0;
+  border-top:0;
+}
+.faa-env-project-page .faa-env-time-tick-label {top:5px;font-size:11px;color:#173656;}
+.faa-env-project-page .faa-env-time-statuslabel {font-size:12px;font-weight:500;letter-spacing:0;color:#172d46;}
+.faa-env-project-page .faa-env-time-row {min-height:50px;}
+.faa-env-project-page .faa-env-time-rowlabel {
+  color:#045a98;font-size:12px;line-height:1.28;text-align:right;
+  overflow-wrap:normal;
+}
+.faa-env-project-page button.faa-env-time-action-link {
+  appearance:none;background:transparent;border:0;
+  padding:0;margin:0;text-align:right;
+  font:400 12px/1.28 'Open Sans',Arial,sans-serif;
+  color:#045a98;cursor:pointer;
+}
+.faa-env-project-page button.faa-env-time-action-link:hover,
+.faa-env-project-page button.faa-env-time-action-link:focus-visible,
+.faa-env-project-page button.faa-env-time-action-link[aria-pressed="true"] {
+  text-decoration:underline;
+}
+.faa-env-project-page button.faa-env-time-overall {
+  font-weight:700;color:#1e2c37;text-decoration:underline;
+}
+.faa-env-project-page .faa-env-time-row-track {
+  height:50px;
+  border-left:1px dotted #838d96;
+  border-right:1px dotted #838d96;
+}
+.faa-env-project-page .faa-env-time-row:first-of-type .faa-env-time-row-track {
+  border-top:1px solid #9da5ab;
+}
+.faa-env-project-page .faa-env-time-gridline {border-left:1px dashed #8d9299;}
+.faa-env-project-page .faa-env-time-bar {top:11px;height:21px;}
+.faa-env-project-page .faa-env-time-status {font-size:12px;color:#283c51;}
+.faa-env-project-page .faa-env-time-today-line {
+  border-left:3px solid #a0d8f2;
+}
+.faa-env-project-page .faa-env-time-row-track .faa-env-time-today-caption {
+  top:33px;bottom:auto;
+  font-size:11px;font-weight:400;color:#1e2d40;
+}
+.faa-env-project-page .faa-env-time-row-track .faa-env-time-today-arrow {
+  bottom:-11px;color:#9ed8f3;font-size:18px;
+}
+.faa-env-project-page .faa-env-timetable-note:empty {display:none;}
+.faa-env-project-page .faa-env-timetable-note {margin:7px 0 4px;}
+.faa-env-project-page .faa-env-timetable-legend {
+  display:flex;justify-content:space-between;align-items:center;
+  gap:12px;flex-wrap:wrap;padding:20px 1px 0;
+}
+.faa-env-project-page .faa-env-timetable-legend span {
+  font:400 14px/1.4 'Open Sans',Arial,sans-serif;
+  color:#25303e;gap:7px;
+}
+.faa-env-project-page .faa-env-swatch {width:20px;height:19px;}
+
+
+/* V72 — FAA environmental permitting timetable ONLY.
+   Full-width chart below the two-column overview, without affecting other pages. */
+.faa-env-project-page .faa-env-timetable {
+  width:100%; min-width:0; margin-top:34px;
+}
+.faa-env-project-page .faa-env-timetable-scroll {
+  max-width:100%; overflow-x:auto; overflow-y:visible;
+}
+.faa-env-project-page .faa-env-timetable-chart {
+  width:100%; min-width:820px;
+}
+.faa-env-project-page .faa-env-time-gridrow {
+  grid-template-columns:180px minmax(480px,1fr) 124px;
+  column-gap:12px;
+}
+.faa-env-project-page .faa-env-time-axis {height:58px; align-items:stretch;}
+.faa-env-project-page .faa-env-time-tick-label {
+  top:7px; font-size:12px;
+}
+.faa-env-project-page .faa-env-time-statuslabel {
+  align-self:start; margin-top:7px; padding:0;
+  font:500 12px/1.4 'Open Sans',Arial,sans-serif;
+  text-align:left; letter-spacing:0;
+}
+.faa-env-project-page .faa-env-time-rowlabel {
+  font:400 12px/1.35 'Open Sans',Arial,sans-serif;
+}
+.faa-env-project-page .faa-env-time-overall {
+  font-weight:700; color:#1e2c37; text-decoration:underline;
+}
+.faa-env-project-page .faa-env-time-row {min-height:52px;}
+.faa-env-project-page .faa-env-time-row-track {height:52px;}
+.faa-env-project-page .faa-env-time-first-row,
+.faa-env-project-page .faa-env-time-first-row .faa-env-time-row-track {
+  min-height:75px; height:75px;
+}
+.faa-env-project-page .faa-env-time-grid {z-index:0;}
+.faa-env-project-page .faa-env-time-today-line {
+  z-index:1; border-left:3px solid #97d4f3;
+  top:0; bottom:0; pointer-events:none;
+}
+.faa-env-project-page .faa-env-time-first-row .faa-env-time-today-line {
+  top:65px; /* begins immediately after the downward triangle */
+}
+.faa-env-project-page .faa-env-time-bar {
+  z-index:3; top:11px; height:21px;
+  outline-offset:3px; cursor:help;
+}
+.faa-env-project-page .faa-env-time-status {
+  line-height:1.45; font-size:12px;
+  overflow-wrap:normal;
+}
+.faa-env-project-page .faa-env-time-row-track .faa-env-time-today-caption {
+  position:absolute; top:36px; bottom:auto;
+  left:clamp(31px, var(--faa-env-today-pct, 50%), calc(100% - 31px));
+  transform:translateX(-50%);
+  z-index:4; font:700 12px/1.2 'Open Sans',Arial,sans-serif;
+  color:#006eae; white-space:nowrap; pointer-events:none;
+}
+.faa-env-project-page .faa-env-time-row-track .faa-env-time-today-arrow {
+  position:absolute; top:54px; bottom:auto; width:0; height:0;
+  border-left:7px solid transparent; border-right:7px solid transparent;
+  border-top:11px solid #82c7eb;
+  transform:translateX(-50%); color:transparent; font-size:0;
+  z-index:4; pointer-events:none;
+}
+/* V73 — only the environmental-project timetable. A single tooltip is
+   positioned against the viewport so scrolling cannot clip its top edge. */
+.faa-env-project-page .faa-env-time-tooltip {
+  position:fixed;
+  z-index:9999;
+  box-sizing:border-box;
+  width:max-content;
+  min-width:225px;
+  max-width:min(320px, calc(100vw - 24px));
+  padding:9px 11px;
+  background:#fff;
+  color:#1a344a;
+  border:1px solid #a2b9cc;
+  box-shadow:none;
+  filter:none;
+  white-space:pre-line;
+  overflow-wrap:anywhere;
+  font:400 12px/1.55 'Open Sans',Arial,sans-serif;
+  pointer-events:none;
+}
+.faa-env-project-page .faa-env-time-tooltip[hidden] {display:none;}
+
+/* Keep the legend directly below the bottom edge of the chart. */
+.faa-env-project-page .faa-env-timetable-legend {padding-top:8px;}
+
+/* The pale-blue TODAY line is centered on the triangle and meets its tip. */
+.faa-env-project-page .faa-env-time-today-line {transform:translateX(-50%);}
+.faa-env-project-page .faa-env-time-first-row .faa-env-time-today-line {top:64px;}
+.faa-env-project-page .faa-env-time-row-track .faa-env-time-today-caption {color:#000;}
+
+/* Thin, evenly spaced diagonal hatching like the supplied Planned reference. */
+.faa-env-project-page .faa-env-time-bar-planned,
+.faa-env-project-page .faa-env-swatch-planned {
+  border:0;
+  background:repeating-linear-gradient(125deg,
+    #007ac0 0px, #007ac0 1px,
+    #f0f9ff 1px, #f0f9ff 3px);
+}
+
+/* Horizontal starting rule on the first timetable row only. */
+.faa-env-project-page .faa-env-time-first-row .faa-env-time-row-track {
+  border-top:1px solid #9da5ab;
+}
+
+/* V74 — tightly scoped TODAY indicator and timetable row spacing only.
+   The triangle tip and the start of the line use the same vertical coordinate. */
+.faa-env-project-page .faa-env-time-first-row,
+.faa-env-project-page .faa-env-time-first-row .faa-env-time-row-track {
+  min-height:70px;
+  height:70px;
+}
+.faa-env-project-page .faa-env-time-row:not(.faa-env-time-first-row) {min-height:46px;}
+.faa-env-project-page .faa-env-time-row:not(.faa-env-time-first-row) .faa-env-time-row-track {height:46px;}
+.faa-env-project-page .faa-env-time-first-row .faa-env-time-row-track {
+  --faa-env-today-tip-y:64px;
+}
+.faa-env-project-page .faa-env-time-first-row .faa-env-time-today-line {
+  top:var(--faa-env-today-tip-y);
+}
+.faa-env-project-page .faa-env-time-first-row .faa-env-time-today-arrow {
+  top:calc(var(--faa-env-today-tip-y) - 14px);
+  border-left-width:10px;
+  border-right-width:10px;
+  border-top-width:14px;
+}
+.faa-env-project-page .faa-env-time-first-row .faa-env-time-today-caption {
+  top:31px;
+}
+
+
+/* V75 — environmental-project timetable hover text ONLY. Stack each
+   bold field label above its unbolded JS-provided value, within the box. */
+.faa-env-project-page .faa-env-time-tooltip {
+  width:min(260px, calc(100vw - 24px));
+  min-width:0;
+  max-width:calc(100vw - 24px);
+  padding:11px 13px;
+  white-space:normal;
+  text-align:center;
+  overflow-wrap:anywhere;
+}
+.faa-env-project-page .faa-env-time-tooltip-field + .faa-env-time-tooltip-field {
+  margin-top:8px;
+}
+.faa-env-project-page .faa-env-time-tooltip-label {
+  font-weight:700;
+  line-height:1.35;
+}
+.faa-env-project-page .faa-env-time-tooltip-value {
+  margin-top:2px;
+  font-weight:400;
+  line-height:1.4;
+  white-space:pre-wrap;
+  overflow-wrap:anywhere;
+}

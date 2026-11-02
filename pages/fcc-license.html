@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>License / Application Details — Federal Communications Commission (Simulation)</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/sr-favicon.svg?v=28">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/sr-favicon-32.png?v=28">
+  <link rel="shortcut icon" href="../assets/images/favicon.ico?v=28">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/sr-favicon-180.png?v=28">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script defer src="../assets/js/shared-header.js"></script>
+  <script defer src="../data/fcc-license-records.js"></script>
+  <script defer src="../assets/js/fcc-application.js"></script>
+  <script defer src="../assets/js/fcc-pdf.js"></script>
+</head>
+<body class="fcc-page fcc-application-page">
+  <div id="utility-header"></div>
+  <header class="fcc-header">
+    <div class="fcc-brand">
+      <img src="../assets/images/fcc-emblem.svg" alt="" class="fcc-insignia">
+      <span class="agency-brand-label">Federal Communications Commission<br>Simulation</span>
+    </div>
+    <nav class="fcc-header-nav" aria-label="FCC navigation">
+      <a href="../index.html">Directory</a>
+    </nav>
+  </header>
+
+  <main class="fcc-application-main">
+    <div class="fcc-application-actions">
+      <a class="fcc-application-back" href="fcc-licenses.html">&lt; License Search</a>
+      <a class="fcc-application-download" id="fcc-application-download" href="#" hidden>Download PDF</a>
+    </div>
+    <article id="fcc-application-document" class="fcc-application-document" aria-label="FCC license or application details" hidden>
+      <h1 id="fcc-application-title"><span id="fcc-application-title-text">FCC License / Application Details</span><img src="../assets/images/fcc-emblem.svg" class="fcc-application-seal" alt="FCC simulation seal"></h1>
+      <section class="fcc-application-section" aria-label="General information">
+        <h2>General Information</h2>
+        <dl class="fcc-application-fields">
+          <div><dt>Call Sign:</dt><dd id="fcc-detail-call-sign"></dd></div>
+          <div><dt>File Number:</dt><dd id="fcc-detail-file-number"></dd></div>
+          <div><dt>Licensee:</dt><dd id="fcc-detail-licensee"></dd></div>
+          <div><dt>FCC Registration Number (FRN):</dt><dd id="fcc-detail-frn"></dd></div>
+          <div><dt>License Type:</dt><dd id="fcc-detail-type"></dd></div>
+          <div><dt>Status:</dt><dd id="fcc-detail-status"></dd></div>
+          <div><dt>Class of Station:</dt><dd id="fcc-detail-class-of-station"></dd></div>
+          <div><dt>Effective Date:</dt><dd id="fcc-detail-effective-date"></dd></div>
+        </dl>
+      </section>
+      <section class="fcc-application-section fcc-application-multiline" aria-label="Explanation">
+        <h2>Explanation</h2>
+        <p class="fcc-application-prompt">Please explain in the area below why an STA is necessary:</p>
+        <div id="fcc-detail-explanation"></div>
+      </section>
+      <section class="fcc-application-section fcc-application-multiline" aria-label="Purpose of operation">
+        <h2>Purpose of Operation</h2>
+        <p class="fcc-application-prompt">Please explain the purpose of the operation:</p>
+        <div id="fcc-detail-purpose-of-operation"></div>
+      </section>
+      <section class="fcc-application-section" aria-label="Requested period of operation">
+        <h2>Requested Period of Operation</h2>
+        <dl class="fcc-application-fields">
+          <div><dt>Operation Start Date:</dt><dd id="fcc-detail-operation-start-date"></dd></div>
+          <div><dt>Operation End Date:</dt><dd id="fcc-detail-operation-end-date"></dd></div>
+        </dl>
+      </section>
+      <section class="fcc-application-section fcc-application-manufacturer" aria-label="Manufacturer">
+        <h2>Manufacturer</h2>
+        <p class="fcc-application-prompt">List below transmitting equipment to be installed (if experimental, so state) if additional rows are required, please submit equipment list as an exhibit:</p>
+        <div class="fcc-application-equipment-scroll">
+          <table class="fcc-application-equipment-table" aria-label="Transmitting equipment manufacturers">
+            <thead><tr>
+              <th scope="col">Manufacturer</th>
+              <th scope="col">Model Number</th>
+              <th scope="col">No. of Units</th>
+              <th scope="col">Experimental</th>
+            </tr></thead>
+            <tbody id="fcc-detail-manufacturers"></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="fcc-application-section fcc-application-stations" aria-label="Station Location">
+        <h2>Station Location</h2>
+        <div id="fcc-detail-station-locations" class="fcc-application-station-list"></div>
+      </section>
+    </article>
+  </main>
+  <footer class="fcc-footer">Stormworks only - not for public use · For game simulation only - not real</footer>
+</body>
+</html>

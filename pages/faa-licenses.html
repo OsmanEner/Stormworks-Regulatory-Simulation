@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Licenses — FAA Commercial Space Transportation (Simulation)</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/sr-favicon.svg?v=28">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/sr-favicon-32.png?v=28">
+  <link rel="shortcut icon" href="../assets/images/favicon.ico?v=28">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/sr-favicon-180.png?v=28">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script defer src="../assets/js/shared-header.js"></script>
+  <script defer src="../assets/js/nass-clock.js"></script>
+  <script defer src="../data/faa-license-records.js"></script>
+  <script defer src="../assets/js/faa-license-registry.js"></script>
+</head>
+<body class="faa-cst-page faa-license-page">
+  <div id="utility-header"></div>
+  <header class="faa-header">
+    <div class="faa-brand">
+      <img src="../assets/images/faa-insignia.svg" alt="" class="faa-insignia">
+      <span class="agency-brand-label">Federal Aviation Administration<br>Simulation</span>
+    </div>
+    <nav class="faa-header-nav" aria-label="FAA Commercial Space Transportation navigation">
+      <a href="../index.html">Directory</a>
+      <a href="faa-stakeholder-engagement.html">Stakeholder Engagement</a>
+      <a href="faa-licenses.html" aria-current="page">Licenses</a>
+    </nav>
+  </header>
+  <main class="faa-lic-main" aria-label="FAA commercial space license and launch data">
+    <div class="faa-lic-grid">
+      <aside class="faa-lic-sidebar" aria-label="License database categories">
+        <nav class="faa-lic-tabs" aria-label="License database views">
+          <button type="button" class="faa-lic-tab is-active" data-view="licensedLaunches" aria-pressed="true">Licensed Launches</button>
+          <div class="faa-lic-tab-gap" aria-hidden="true"></div>
+          <button type="button" class="faa-lic-tab" data-view="launchLicenses" aria-pressed="false">Launch Licenses</button>
+          <button type="button" class="faa-lic-tab" data-view="reentryLicenses" aria-pressed="false">Reentry Licenses</button>
+        </nav>
+      </aside>
+      <section class="faa-lic-content" aria-label="Selected database table">
+        <div class="faa-lic-table-scroll">
+          <table class="faa-lic-table" aria-label="Licensed Launches">
+            <thead id="faa-lic-head"></thead>
+            <tbody id="faa-lic-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+    <div class="faa-lic-bottom">
+      <div class="faa-lic-last-updated" id="faa-lic-last-updated">Last updated: —</div>
+      <time class="faa-lic-utc-clock" id="nass-utc-clock" aria-label="Current UTC time">Current: — GMT+0</time>
+    </div>
+  </main>
+  <footer class="tfr-footer">Stormworks only - not for public use · For game simulation only - not real</footer>
+</body>
+</html>

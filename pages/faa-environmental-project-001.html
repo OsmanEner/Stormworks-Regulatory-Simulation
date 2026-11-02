@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Environmental Project — FAA Commercial Space Transportation Simulation</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/sr-favicon.svg?v=28">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/sr-favicon-32.png?v=28">
+  <link rel="shortcut icon" href="../assets/images/favicon.ico?v=28">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script defer src="../assets/js/shared-header.js"></script>
+  <script defer src="../assets/js/faa-environmental-project.js"></script>
+</head>
+<body class="faa-cst-page faa-env-project-page">
+  <div id="utility-header"></div>
+  <header class="faa-header">
+    <div class="faa-brand">
+      <img src="../assets/images/faa-insignia.svg" alt="" class="faa-insignia">
+      <span class="agency-brand-label">Federal Aviation Administration<br>Simulation</span>
+    </div>
+    <nav class="faa-header-nav" aria-label="FAA Commercial Space Transportation navigation">
+      <a href="../index.html">Directory</a>
+      <a href="faa-stakeholder-engagement.html">Stakeholder Engagement</a>
+      <a href="faa-licenses.html">Licenses</a>
+    </nav>
+  </header>
+
+  <main class="faa-env-main" aria-label="Environmental review project details">
+    <p id="faa-env-load-error" class="faa-env-error" hidden>Project information has not been published.</p>
+    <div id="faa-env-project-content" hidden>
+      <h1 id="faa-env-title"></h1>
+      <div class="faa-env-layout">
+        <section class="faa-env-left" aria-label="Environmental review and permitting information">
+          <p class="faa-env-website"><strong>PROJECT WEBSITE:</strong> <a id="faa-env-site-link" href="faa-stakeholder-engagement.html">Stakeholder Engagement</a></p>
+          <p class="faa-env-intro">This is not representative of real life, this is strictly only for a game simulation</p>
+
+          <div class="faa-env-primary-stats">
+            <div class="faa-env-primary-stat">
+              <span class="faa-env-stat-icon" aria-hidden="true">
+                <svg viewBox="0 0 90 90" width="86" height="86"><circle cx="45" cy="45" r="36" stroke="currentColor" fill="none" stroke-width="5" stroke-dasharray="170 9"/><path d="M25 46l13 13 27-30" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="faa-env-stat-label">ENVIRONMENTAL REVIEW AND PERMITTING STATUS</span>
+              <span class="faa-env-stat-value" id="faa-env-status"></span>
+            </div>
+            <div class="faa-env-primary-stat">
+              <span class="faa-env-stat-icon" aria-hidden="true">
+                <svg viewBox="0 0 90 90" width="86" height="86"><rect x="12" y="19" width="66" height="62" rx="1" stroke="currentColor" fill="none" stroke-width="4"/><path d="M12 36h66M26 8v20M64 8v20" stroke="currentColor" stroke-width="4"/><circle cx="55" cy="61" r="16" fill="white" stroke="currentColor" stroke-width="3"/><path d="M48 61l5 5 10-12" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+              </span>
+              <span class="faa-env-stat-label">ESTIMATED COMPLETION DATE OF ENVIRONMENTAL REVIEW AND PERMITTING</span>
+              <span class="faa-env-stat-value" id="faa-env-completion"></span>
+            </div>
+          </div>
+
+          <div class="faa-env-secondary-stats">
+            <div class="faa-env-secondary-stat">
+              <div class="faa-env-progress" id="faa-env-progress" aria-label="Processes completed"></div>
+              <span class="faa-env-secondary-label">ENVIRONMENTAL REVIEW AND PERMITTING PROCESSES COMPLETED</span>
+            </div>
+            <div class="faa-env-secondary-stat">
+              <span class="faa-env-secondary-icon" aria-hidden="true"><svg class="faa-env-detail-icon" viewBox="0 0 100 100" width="88" height="88" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M50 6c-4.2 0-6.6 5.9-6.6 13.1v22.1L18.1 58.3l-5 11.5 30.3-8.8v19.6l-12.7 8.6v5l19.3-5.7 19.3 5.7v-5l-12.7-8.6V61l30.3 8.8-5-11.5-25.3-17.1V19.1C56.6 11.9 54.2 6 50 6Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+                <path d="M50 12v72M43.4 42.7 22 58.4m34.6-15.7L78 58.4M43.4 58l-21 6.2m34.2-6.2 21 6.2M44 80.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M47.1 18h5.8M47.1 27h5.8" stroke="currentColor" stroke-width="1.1"/>
+              </svg></span>
+              <span class="faa-env-secondary-label">SECTOR</span>
+              <span class="faa-env-secondary-value" id="faa-env-sector"></span>
+            </div>
+            <div class="faa-env-secondary-stat">
+              <span class="faa-env-secondary-icon" aria-hidden="true"><svg class="faa-env-detail-icon" viewBox="0 0 100 100" width="88" height="88" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M27 20H74V91H27V20Z" stroke="currentColor" stroke-width="3.3" stroke-linejoin="round"/>
+                <path d="M18 12H66V20M18 12V82H27" stroke="currentColor" stroke-width="3.3" stroke-linejoin="round"/>
+                <path d="M35 38H64M35 51H64M35 64H64M35 77H58" stroke="currentColor" stroke-width="3.5" stroke-linecap="square"/>
+              </svg></span>
+              <span class="faa-env-secondary-label">CATEGORY</span>
+              <span class="faa-env-secondary-value" id="faa-env-category"></span>
+            </div>
+            <div class="faa-env-secondary-stat">
+              <span class="faa-env-secondary-icon faa-env-agency-mark"><img src="../assets/images/faa-insignia.svg" alt="Simulation aviation emblem" width="86" height="86"></span>
+              <span class="faa-env-secondary-label">LEAD AGENCY</span>
+              <span class="faa-env-secondary-value" id="faa-env-agency"></span>
+            </div>
+          </div>
+          <section class="faa-env-description" aria-label="Project description">
+            <h2>Description:</h2>
+            <div id="faa-env-description-text"></div>
+          </section>
+          <section class="faa-env-related" id="faa-env-related" hidden>
+            <h2>Related Environmental Projects</h2>
+            <div id="faa-env-related-links"></div>
+          </section>
+        </section>
+        <aside class="faa-env-blue-sidebar" aria-label="Blue project information panel">
+          <!-- Intentionally empty blue panel; no map, contact or address information. -->
+        </aside>
+      </div>
+          <section class="faa-env-timetable" id="faa-env-timetable" aria-label="Permitting timetable" hidden>
+            <h2>Permitting Timetable</h2>
+            <p class="faa-env-timetable-lead">The permitting timetable below displays data as reported by agencies. Dates for Environmental Review and Permitting processes (Actions) that are in 'Paused' or 'Planned' status are subject to change and are not indicative of a project's final schedule.</p>
+            <ul class="faa-env-timetable-guidance"><li>For information about extensions, hover over an action slider for start, end and delays information.</li></ul>
+            <div class="faa-env-timetable-scroll" tabindex="0" aria-label="Scrollable permitting timeline">
+              <div id="faa-env-timetable-chart" class="faa-env-timetable-chart"></div>
+            </div>
+            <p id="faa-env-timetable-note" class="faa-env-timetable-note" aria-live="polite"></p>
+            <div class="faa-env-timetable-legend" aria-label="Timetable status legend">
+              <span><i class="faa-env-swatch faa-env-swatch-scheduled" aria-hidden="true"></i> Scheduled</span>
+              <span><i class="faa-env-swatch faa-env-swatch-extension" aria-hidden="true"></i> Extension or Delay</span>
+              <span><i class="faa-env-swatch faa-env-swatch-paused" aria-hidden="true"></i> Paused</span>
+              <span><i class="faa-env-swatch faa-env-swatch-planned" aria-hidden="true"></i> Planned</span>
+            </div>
+          </section>
+    </div>
+  </main>
+  <footer class="tfr-footer">Stormworks only - not for public use · For game simulation only - not real</footer>
+</body>
+</html>
