@@ -21,9 +21,9 @@ window.faaEnvironmentalProject = {
   projectWebsite: 'faa-stakeholder-engagement.html',
   projectWebsiteLabel: 'Stakeholder Engagement',
   status: 'IN PROGRESS',
-  estimatedCompletionDate: 'To be determined',
+  estimatedCompletionDate: 'Monday, November 9, 2026',
   processesCompleted: 0,
-  processesTotal: 3,
+  processesTotal: 4,
   sector: 'Aviation',
   category: 'Commercial Space Transportation',
   leadAgency: 'Federal Aviation Administration (Simulation)',
@@ -40,7 +40,7 @@ window.faaEnvironmentalProject = {
   descriptionBlocks: [
     {
       type: 'paragraph',
-      text: `The proposed action concerns a fictional Starship prototype ground-testing and initial suborbital flight-test program conducted within Stormworks. This page tracks the simulated environmental review and permitting process.`,
+      text: `The proposed action is related to Starship upper stage launch vehicle operations from Boca Chica, Texas, including ground and flight testing.`,
       fontSize: 15,
       color: '#213047',
       bold: false,
@@ -55,20 +55,6 @@ window.faaEnvironmentalProject = {
       bold: false,
       italic: false,
       underline: false
-      // Optional: spacingBefore: 10, spacingAfter: 30
-    },
-    {
-      type: 'button',
-      text: 'Open Sample Environmental Document (PDF)',
-      pdf: 'Environmental-Project-SAMPLE.pdf',
-      backgroundColor: '#00457d',
-      color: '#ffffff',
-      fontSize: 14,
-      bold: true,
-      italic: false,
-      underline: false,
-      spacingBefore: 6,
-      spacingAfter: 18
     },
     // Example text link to another page:
     // { type: 'link', text: 'Stakeholder Engagement', url: 'faa-stakeholder-engagement.html', underline: true },
@@ -85,14 +71,13 @@ window.faaEnvironmentalProject = {
   // Omitting statusText displays the same text as status; omitting delayInfo means None reported.
   // All example activities and dates are fictional Stormworks planning data.
   permittingTimetable: {
-    startDate: '2026-10-15',  // GRAPH START — CHANGE THIS
+    startDate: '2026-10-25',  // GRAPH START — CHANGE THIS
     endDate: '2026-11-30',    // GRAPH END — CHANGE THIS
     actions: [
-      { title: 'Overall Project Timetable', startDate: '2026-10-18', endDate: '2026-11-25', status: 'Scheduled', statusText: 'In Progress' },
-      { title: 'Environmental Assessment', startDate: '2026-10-19', endDate: '2026-11-17', status: 'Scheduled', statusText: 'In Progress' },
-      { title: 'Technical Review Extension', startDate: '2026-11-02', endDate: '2026-11-10', status: 'Extension or Delay', statusText: 'Delayed', delayInfo: 'Technical review extension (fictional).' },
-      { title: 'Agency Consultation', startDate: '2026-11-08', endDate: '2026-11-19', status: 'Planned' },
-      { title: 'Review Hold', startDate: '2026-11-20', endDate: '2026-11-23', status: 'Paused' }
+      { title: 'Overall Project Timetable', startDate: '2026-11-02', endDate: '2026-11-09', status: 'Scheduled', statusText: 'In Progress', delayInfo: 'N/A' },
+      { title: 'Project Technical Review', startDate: '2026-11-02', endDate: '2026-11-04', status: 'Scheduled', statusText: 'In Progress', delayInfo: 'N/A' },
+      { title: 'Program Risks Assessment', startDate: '2026-11-04', endDate: '2026-11-08', status: 'Planned', statusText: 'Planned', delayInfo: 'N/A' },
+      { title: 'Public Scoping Review', startDate: '2026-11-06', endDate: '2026-11-06', status: 'Planned', delayInfo: 'N/A' },
     ]
   },
 
