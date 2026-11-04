@@ -19,19 +19,17 @@
 */
 
 // ================== BLUE TABLE HEADING (EDIT THIS) =================
-const atcsccTableTitle = 'ATCSCC ADVISORIES FOR WEEK OF 2026-10-28';
+const atcsccTableTitle = 'ATCSCC ADVISORIES FOR WEEK OF 2026-11-04';
 
 // =================== NEXT WEEKLY TABLE DATE/TIME ===================
-const nextWebinarTable = '2026-11-04T19:00:00Z';
+const nextWebinarTable = '2026-11-11T07:00:00Z';
 
 // ======================== OPERATIONS PLANS =========================
 const atcsccAdvisories = [
-  /* COPY/PASTE EXAMPLE — remove only this block comment to publish:
   {
     number: '001',
     controlElement: 'DCC',
-    date: '10/28/26',
-    sendTime: '17:26'
+    date: '11/04/26',
+    sendTime: '07:35'
   },
-  */
 ];

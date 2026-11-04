@@ -70,7 +70,7 @@ window.faaModularPageConfig = {
   blocks: [
     {
       type: 'paragraph',
-      text: `SpaceX proposes to conduct Starship operations from the Boca Chica Launch Site in Cameron County, Texas. SpaceX must apply for and obtain an experimental permit(s) and/or a vehicle operator license from the Office of Commercial Space Transportation to operate the Starship launch vehicle. The FAA's evaluation of a permit or license application includes a review of publi safety issues.`,
+      text: `SpaceX proposes to conduct Starship operations from the Boca Chica Launch Site in Cameron County, Texas. SpaceX must apply for and obtain an experimental permit(s) and/or a vehicle operator license from the Office of Commercial Space Transportation to operate the Starship launch vehicle. The FAA's evaluation of a permit or license application includes a review of public safety issues.`,
       fontSize: 16,
       color: '#253B51',
       bold: false,
