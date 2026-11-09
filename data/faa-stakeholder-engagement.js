@@ -158,6 +158,15 @@ window.faaModularPageConfig = {
       italic: false,
       underline: false
     },
+      {
+      type: 'paragraph',
+      text: `     • November Update: The virtual meeting has been delayed to November 10th due to delays with the technical program reviews.`,
+      fontSize: 16,
+      color: '#253B51',
+      bold: false,
+      italic: false,
+      underline: false
+    },
     {
       type: 'paragraph',
       text: `In progress: Environmental Assessment for SpaceX Starship operations at Boca Chica, Texas`,
