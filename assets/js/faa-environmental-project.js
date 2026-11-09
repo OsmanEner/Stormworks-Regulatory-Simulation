@@ -55,7 +55,8 @@
     return new Intl.DateTimeFormat('en-US', {month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}).format(new Date(stamp));
   }
   const timetableClasses = {
-    'scheduled':'scheduled', 'extension or delay':'extension',
+    'scheduled':'scheduled', 'in progress':'scheduled', 'completed':'scheduled',
+    'extension or delay':'extension', 'delayed':'delayed',
     'paused':'paused', 'planned':'planned'
   };
   function renderTimetable(data) {
@@ -175,12 +176,22 @@
     let firstTrack=null;
     for (const item of rowList) {
       if (!item || typeof item !== 'object' || typeof item.title !== 'string') continue;
-      const from=utcDay(item.startDate), to=utcDay(item.endDate);
-      if (from===null || to===null || to<from) continue;
-      // 'status' controls the bar's legend style. 'statusText' independently
-      // controls the text in the rightmost STATUS column for each action.
-      const type=timetableClasses[String(item.status||'Scheduled').toLowerCase().trim()];
-      if(!type)continue;
+      // Backwards compatible: the original startDate/endDate/status fields
+      // still create one bar. For a multi-color action, add a `periods` array:
+      // [{status:'In Progress',startDate:'YYYY-MM-DD',endDate:'YYYY-MM-DD'},
+      //  {status:'Delayed',startDate:'YYYY-MM-DD',endDate:'YYYY-MM-DD'}]
+      // Each period owns its dates and its own tooltip; no existing data is edited.
+      const hasPeriods=Array.isArray(item.periods) && item.periods.length>0;
+      const rawPeriods=hasPeriods ? item.periods : [item];
+      const periods=rawPeriods.map(period=>{
+        if (!period || typeof period !== 'object') return null;
+        const from=utcDay(period.startDate),to=utcDay(period.endDate);
+        if (from===null || to===null || to<from) return null;
+        const label=String(period.status || item.status || 'Scheduled').trim();
+        const type=timetableClasses[label.toLowerCase()];
+        return type ? {data:period,from,to,type,label} : null;
+      }).filter(Boolean).sort((a,b)=>a.from-b.from);
+      if (!periods.length) continue;
       const line=document.createElement('div'); line.className='faa-env-time-gridrow faa-env-time-row';
       const name=document.createElement('span'); name.className='faa-env-time-rowlabel';
       name.textContent=item.title;
@@ -192,17 +203,25 @@
       const today=document.createElement('i');today.className='faa-env-time-today-line';
       today.setAttribute('aria-hidden','true');
       track.appendChild(today);todayMarkers.push(today);
-      const visibleStart=Math.max(from,start), visibleEnd=Math.min(to,end);
-      if (visibleStart<=visibleEnd) {
+      for (const period of periods) {
+        const {from,to,type,label}=period;
+        const visibleStart=Math.max(from,start),visibleEnd=Math.min(to,end);
+        if (visibleStart>visibleEnd) continue;
         const bar=document.createElement('div');
         bar.className='faa-env-time-bar faa-env-time-bar-'+type;
         const leftPct=(visibleStart-start)/(days*DAY_MS)*100;
         const widthPct=(visibleEnd-visibleStart+DAY_MS)/(days*DAY_MS)*100;
         bar.style.left=leftPct+'%';bar.style.width=widthPct+'%';
-        const delayInfo=(typeof item.delayInfo === 'string' && item.delayInfo.trim())
-          ? item.delayInfo.trim() : 'None reported';
-        const visibleStatus=(typeof item.statusText === 'string' && item.statusText.trim())
-          ? item.statusText.trim() : item.status;
+        const delayInfo=(typeof period.data.delayInfo==='string' && period.data.delayInfo.trim())
+          ? period.data.delayInfo.trim()
+          : ((typeof item.delayInfo==='string' && item.delayInfo.trim())
+              ? item.delayInfo.trim() : 'None reported');
+        // A segmented action shows each section's actual dates and status on hover.
+        // Single-period legacy actions retain their original statusText behavior.
+        const visibleStatus=(typeof period.data.statusText==='string' && period.data.statusText.trim())
+          ? period.data.statusText.trim()
+          : (hasPeriods ? label : ((typeof item.statusText==='string' && item.statusText.trim())
+              ? item.statusText.trim() : label));
         const tooltipFields=[
           ['ACTION',item.title],
           ['START DATE',`${fullDate(from)} (UTC)`],
@@ -210,7 +229,7 @@
           ['STATUS',visibleStatus],
           ['EXTENSION / DELAY',delayInfo]
         ];
-        bar.setAttribute('aria-label',tooltipFields.map(([label,value])=>`${label}: ${value}`).join(', '));
+        bar.setAttribute('aria-label',tooltipFields.map(([key,value])=>`${key}: ${value}`).join(', '));
         bar.tabIndex=0;
         bar.addEventListener('mouseenter',()=>showTooltip(bar,tooltipFields));
         bar.addEventListener('mouseleave',hideTooltip);
@@ -218,9 +237,21 @@
         bar.addEventListener('blur',hideTooltip);
         track.appendChild(bar);
       }
+      const finalPeriod=periods[periods.length-1];
+      const visibleRowStatus=(typeof item.statusText==='string' && item.statusText.trim())
+        ? item.statusText.trim()
+        : ((hasPeriods && typeof finalPeriod.data.statusText==='string' && finalPeriod.data.statusText.trim())
+            ? finalPeriod.data.statusText.trim()
+            : (hasPeriods ? finalPeriod.label : String(item.status || 'Scheduled')));
       const status=document.createElement('span');status.className='faa-env-time-status';
-      status.textContent=(typeof item.statusText === 'string' && item.statusText.trim())
-        ? item.statusText.trim() : item.status;
+      status.appendChild(document.createTextNode(visibleRowStatus));
+      if (visibleRowStatus.toLowerCase()==='completed') {
+        const check=document.createElement('span');
+        check.className='faa-env-time-completed-check';
+        check.textContent='✓';
+        check.setAttribute('aria-hidden','true');
+        status.appendChild(check);
+      }
       line.append(name,track,status);
       chart.appendChild(line);
     }

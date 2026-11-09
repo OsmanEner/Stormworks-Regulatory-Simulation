@@ -16,6 +16,8 @@
 const tfrDetails = {
   // =========== COPY/PASTE FULL TFR DETAIL EXAMPLE ===========
 
+
+  /*
   '11/9001': {
     issueDate: 'Tuesday 3, 2026 at 23:33 UTC',
     location: 'BOCA CHICA, Texas near BROWNSVILLE, TX',
@@ -34,4 +36,5 @@ const tfrDetails = {
     pointOfContact: 'Stormworks SpaceX',
     contactTelephone: '+1 202-555-0147'
   },
+  */
 };

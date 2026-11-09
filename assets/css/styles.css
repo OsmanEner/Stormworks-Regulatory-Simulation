@@ -1532,3 +1532,20 @@ body.faa-env-project-page {
   white-space:pre-wrap;
   overflow-wrap:anywhere;
 }
+
+
+/* V81 — only FAA environmental timetable segments and completed status.
+   An extension is appended after the existing blue/planned segment. */
+.faa-env-project-page .faa-env-time-bar-delayed {
+  background:#d9d9d9;
+  border:0;
+}
+.faa-env-project-page .faa-env-time-completed-check {
+  display:inline-block;
+  margin-left:4px;
+  color:#007ac0;
+  font-weight:700;
+  font-size:15px;
+  line-height:1;
+  vertical-align:baseline;
+}

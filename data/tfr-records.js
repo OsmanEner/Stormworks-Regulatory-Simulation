@@ -20,10 +20,11 @@
 */
 const tfrData = {
   // Set this to the UTC publication timestamp when you add a TFR.
-  asOfUTC: '23:37 UTC',
+  asOfUTC: '07:00 UTC',
 
   records: [
 
+    /*
     {
       date: '11/03/2026',
       notam: '11/9001',
@@ -32,6 +33,7 @@ const tfrData = {
       type: 'SPACE OPERATIONS',
       description: `BOCA CHICA, TX, Monday, November 9, 2026 through Monday, October 9, 00:01 UTC`
     },
+    */
 
     /* REMOVE THESE COMMENT MARKERS TO PUBLISH:
     {

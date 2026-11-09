@@ -27,7 +27,7 @@ const countyRecords = {
     /* COPY/PASTE EXAMPLE — remove the comment markers when publishing:
     {
       type: 'Primary Day',
-      date: 'Nov 12, 2026',
+      date: 'Nov 09, 2026',
       time: '12:00 p.m. to 10:00 p.m.',
       status: 'Closure Scheduled. Hwy 4 & Boca Chica will be Closed.'
     },
@@ -36,25 +36,25 @@ const countyRecords = {
 
   // ================= INTERMITTENT ROAD DELAYS ===================
   delays: [
+      {
+      type: 'Primary Day',
+      date: 'Nov 09, 2026',
+      time: '08:00 a.m. to 09:00 a.m.',
+    },
   ],
 
   // ================== PUBLISHED COUNTY ORDERS ===================
   orders: [
 
     // FULL BEACH CLOSURE ORDER — FOUR text paragraphs
-    /* COPY/PASTE EXAMPLE — remove the comment markers when publishing:
     {
       id: 'CC-2026-002',
-      type: 'closure',
-      date: 'November 12, 2026',
-      title: 'TEMPORARY CLOSURE OF BOCA CHICA BEACH AND STATE HIGHWAY 4',
+      type: 'delay',
+      date: 'November 09, 2026',
+      title: 'NOVEMBER 09 2026 - TEMPORARY AND INTERMITTENT STATE HIGHWAY 4 ROAD DELAY',
       paragraphs: [
-        `First paragraph: authorization and background.`,
-        `Second paragraph: affected locations and closure details.`,
-        `Third paragraph: additional information or a statement.`,
-        `Fourth paragraph: final public information and coordination details.`
+        `Please be advised that on November 9th, 2026, SpaceX will be conducting transportation operations on Highway 4 near Boca Chica sometime between 8:00 a.m. - 9:00 a.m. The beach and highway 4 will remain open throughout the operation; however, traffic may be delayed for a short duration.`
       ]
     },
-    */
   ]
 };

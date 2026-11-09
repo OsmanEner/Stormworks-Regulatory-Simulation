@@ -21,7 +21,7 @@ window.faaEnvironmentalProject = {
   projectWebsite: 'faa-stakeholder-engagement.html',
   projectWebsiteLabel: 'Stakeholder Engagement',
   status: 'IN PROGRESS',
-  estimatedCompletionDate: 'Monday, November 9, 2026',
+  estimatedCompletionDate: 'NEW: Monday, November 13, 2026',
   processesCompleted: 0,
   processesTotal: 4,
   sector: 'Aviation',
@@ -70,16 +70,76 @@ window.faaEnvironmentalProject = {
   // Optional 'delayInfo' appears when hovering/focusing a slider (with dates).
   // Omitting statusText displays the same text as status; omitting delayInfo means None reported.
   // All example activities and dates are fictional Stormworks planning data.
-  permittingTimetable: {
-    startDate: '2026-10-25',  // GRAPH START — CHANGE THIS
-    endDate: '2026-11-30',    // GRAPH END — CHANGE THIS
-    actions: [
-      { title: 'Overall Project Timetable', startDate: '2026-11-02', endDate: '2026-11-09', status: 'Scheduled', statusText: 'In Progress', delayInfo: 'N/A' },
-      { title: 'Project Technical Review', startDate: '2026-11-02', endDate: '2026-11-04', status: 'Scheduled', statusText: 'In Progress', delayInfo: 'N/A' },
-      { title: 'Program Risks Assessment', startDate: '2026-11-04', endDate: '2026-11-08', status: 'Planned', statusText: 'Planned', delayInfo: 'N/A' },
-      { title: 'Public Scoping Review', startDate: '2026-11-06', endDate: '2026-11-06', status: 'Planned', delayInfo: 'N/A' },
-    ]
-  },
+
+permittingTimetable: {
+  startDate: '2026-10-25', // GRAPH START
+  endDate: '2026-11-30',   // GRAPH END
+
+  actions: [
+    {
+      title: 'Overall Project Timetable',
+      statusText: 'In Progress',
+      delayInfo: 'Delayed due to temporary pause',
+      periods: [
+        {
+          status: 'In Progress',
+          startDate: '2026-11-02',
+          endDate: '2026-11-09'
+        },
+        {
+          status: 'Delayed',
+          startDate: '2026-11-09',
+          endDate: '2026-11-13'
+        }
+      ]
+    },
+
+    {
+      title: 'Project Technical Review',
+      statusText: 'Delayed',
+      delayInfo: 'Delayed due to temporary pause',
+      periods: [
+        {
+          status: 'In Progress',
+          startDate: '2026-11-02',
+          endDate: '2026-11-04'
+        },
+        {
+          status: 'Delayed',
+          startDate: '2026-11-04',
+          endDate: '2026-11-09'
+        }
+      ]
+    },
+
+    {
+      title: 'Program Risks Assessment',
+      statusText: 'Planned',
+      delayInfo: 'Delayed due to temporary pause',
+      periods: [
+        {
+          status: 'Planned',
+          startDate: '2026-11-04',
+          endDate: '2026-11-13'
+        }
+      ]
+    },
+
+    {
+      title: 'Public Scoping Review',
+      statusText: 'Planned',
+      delayInfo: 'Delayed due to temporary pause',
+      periods: [
+        {
+          status: 'Planned',
+          startDate: '2026-11-06',
+          endDate: '2026-11-10'
+        },
+      ]
+    }
+  ]
+},
+
 
   // Optional links to other project HTML pages (leave [] for no section).
   relatedProjects: [
