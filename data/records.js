@@ -24,14 +24,12 @@ const countyOrderSettings = {
 const countyRecords = {
   // ================= FULL ROAD / BEACH CLOSURES =================
   closures: [
-    /* COPY/PASTE EXAMPLE — remove the comment markers when publishing:
     {
       type: 'Primary Day',
-      date: 'Nov 09, 2026',
-      time: '12:00 p.m. to 10:00 p.m.',
+      date: 'Nov 11, 2026',
+      time: '5:00 a.m. to 2:00 p.m.',
       status: 'Closure Scheduled. Hwy 4 & Boca Chica will be Closed.'
     },
-    */
   ],
 
   // ================= INTERMITTENT ROAD DELAYS ===================
@@ -54,6 +52,17 @@ const countyRecords = {
       title: 'NOVEMBER 10 2026 - TEMPORARY AND INTERMITTENT STATE HIGHWAY 4 ROAD DELAY',
       paragraphs: [
         `Please be advised that on November 10th, 2026, SpaceX will be conducting transportation operations on Highway 4 near Boca Chica sometime between 8:00 a.m. - 9:00 a.m. The beach and highway 4 will remain open throughout the operation; however, traffic may be delayed for a short duration.`
+      ]
+    },
+    {
+      id: 'CC-2026-004',
+      type: 'closure',
+      date: 'November 10, 2026',
+      title: 'NOVEMBER 11 2026 - TEMPORARY AND INTERMITTENT STATE HIGHWAY 4 ROAD DELAY',
+      paragraphs: [
+        `On November 10th, 2026, the Commissioners' Court approved an Order authorizing County Judge Barack H Obama II, to execute any and all neccessary or appropiate notices or orders of temporary closure of State Highway 4, and/or Boca Chica Beach in connection with flight testing activity, now or in the future.`,
+        `"I have ordered the closure of Boca Chica Beach and Hwy 4 for the purpose of protecting Public Health and Safety during SpaceX flight testing activities on November 11th, 2026 in the time period between 5:00 a.m. to 2:00 p.m. UTC." Judge stated.`,
+        `SpaceX and law enforcement authorities will be coordinating to ensure that no individuals or vehicles are allowed access to these areas during these times of the day In coordination with the County.`,
       ]
     },
   ]

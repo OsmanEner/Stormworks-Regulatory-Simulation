@@ -24,5 +24,15 @@
 const fccLicenseData = {
   asOfUTC: '—',
   records: [
+    /*
+    {
+      fileNumber: '1234-EX-ST-2026',
+      callSign: 'AD8XBY',
+      licensee: 'Space Exploration Technologies Corp.',
+      state: 'TX',
+      type: 'STA',
+      status: 'Granted'
+    },
+    */
   ]
 };
