@@ -96,7 +96,7 @@ permittingTimetable: {
 
     {
       title: 'Project Technical Review',
-      statusText: 'Delayed',
+      statusText: 'Completed',
       delayInfo: 'Delayed due to temporary pause',
       periods: [
         {
@@ -127,12 +127,17 @@ permittingTimetable: {
 
     {
       title: 'Public Scoping Review',
-      statusText: 'Planned',
+      statusText: 'In Progress',
       delayInfo: 'Delayed due to temporary pause',
       periods: [
         {
           status: 'Planned',
           startDate: '2026-11-06',
+          endDate: '2026-11-09'
+        },
+        {
+          status: 'In Progress',
+          startDate: '2026-11-10',
           endDate: '2026-11-10'
         },
       ]
