@@ -22,7 +22,7 @@ window.faaEnvironmentalProject = {
   projectWebsiteLabel: 'Stakeholder Engagement',
   status: 'IN PROGRESS',
   estimatedCompletionDate: 'NEW: Monday, November 13, 2026',
-  processesCompleted: 0,
+  processesCompleted: 1,
   processesTotal: 4,
   sector: 'Aviation',
   category: 'Commercial Space Transportation',
