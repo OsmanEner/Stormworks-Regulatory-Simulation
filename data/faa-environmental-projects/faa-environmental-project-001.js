@@ -21,8 +21,8 @@ window.faaEnvironmentalProject = {
   projectWebsite: 'faa-stakeholder-engagement.html',
   projectWebsiteLabel: 'Stakeholder Engagement',
   status: 'IN PROGRESS',
-  estimatedCompletionDate: 'NEW: Monday, November 13, 2026',
-  processesCompleted: 1,
+  estimatedCompletionDate: 'NEW: Monday, November 15, 2026',
+  processesCompleted: 2,
   processesTotal: 4,
   sector: 'Aviation',
   category: 'Commercial Space Transportation',
@@ -120,6 +120,11 @@ permittingTimetable: {
         {
           status: 'Planned',
           startDate: '2026-11-04',
+          endDate: '2026-11-11'
+        },
+        {
+          status: 'In Progress',
+          startDate: '2026-11-11',
           endDate: '2026-11-13'
         }
       ]
@@ -127,7 +132,7 @@ permittingTimetable: {
 
     {
       title: 'Public Scoping Review',
-      statusText: 'In Progress',
+      statusText: 'Completed',
       delayInfo: 'Delayed due to temporary pause',
       periods: [
         {

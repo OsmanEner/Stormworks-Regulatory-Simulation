@@ -28,7 +28,7 @@ const countyRecords = {
       type: 'Primary Day',
       date: 'Nov 11, 2026',
       time: '5:00 a.m. to 2:00 p.m.',
-      status: 'Closure Scheduled. Hwy 4 & Boca Chica will be Closed.'
+      status: 'Road and Beach Open.'
     },
   ],
 
