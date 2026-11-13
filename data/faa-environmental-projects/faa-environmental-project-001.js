@@ -114,7 +114,7 @@ permittingTimetable: {
 
     {
       title: 'Program Risks Assessment',
-      statusText: 'Planned',
+      statusText: 'In Progress',
       delayInfo: 'Delayed due to temporary pause',
       periods: [
         {
