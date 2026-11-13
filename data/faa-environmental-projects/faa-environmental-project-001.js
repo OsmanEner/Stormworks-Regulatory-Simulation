@@ -125,7 +125,7 @@ permittingTimetable: {
         {
           status: 'In Progress',
           startDate: '2026-11-11',
-          endDate: '2026-11-13'
+          endDate: '2026-11-15'
         }
       ]
     },
